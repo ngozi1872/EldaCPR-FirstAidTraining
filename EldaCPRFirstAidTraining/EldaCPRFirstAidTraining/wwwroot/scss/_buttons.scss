@@ -1,0 +1,529 @@
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: $border-radius;
+    &.btn-primary {
+        background: $primary-color;
+        border: none;
+        color: $primary-text-inverse;
+        &:hover{
+            color: $primary-text-inverse;
+            background: darken($primary-color, 10%)
+        }
+        &:not(:disabled):not(.disabled):active{
+            color: $primary-text-inverse;
+            background: darken($primary-color, 10%);
+            border-color: lighten($primary-color, 40%);
+            box-shadow: 0 0 0 0.2rem lighten($primary-color, 40%);
+        }
+        &.focus, &:focus{
+            border-color: lighten($primary-color, 40%);
+            box-shadow: 0 0 0 0.2rem lighten($primary-color, 40%);
+        }
+        &.btn-gradient {
+            background: linear-gradient(90deg, darken($primary-color, 20%) 0%, darken($primary-color, 10%) 100%);
+            &:hover{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($primary-color, 30%) 0%, darken($primary-color, 10%) 100%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($primary-color, 30%) 0%, darken($primary-color, 10%) 100%);
+            }
+            &.focus, &:focus{
+                border-color: lighten($primary-color, 40%);
+                box-shadow: 0 0 0 0.2rem lighten($primary-color, 40%);
+            }
+        }
+    }
+    &.btn-secondary {
+        background: $secondary-color;
+        border: none;
+        color: $primary-text-inverse;
+        &:hover{
+            color: $primary-text-inverse;
+            background: darken($secondary-color, 10%);
+        }
+        &:not(:disabled):not(.disabled):active{
+            color: $primary-text-inverse;
+            background: darken($secondary-color, 10%);
+        }
+        &.btn-gradient {
+            background: linear-gradient(90deg, darken($secondary-color, 20%) 0%, $secondary-color 100%);
+            &:hover{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($secondary-color, 30%) 0%, darken($secondary-color, 10%) 100%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($secondary-color, 30%) 0%, darken($secondary-color, 10%) 100%);
+            }
+        }
+    }
+    &.btn-light {
+        background: $light-color;
+        border: none;
+        color: $primary-text-color;
+        &:hover{
+            color: $primary-text-color;
+            background: darken($light-color, 10%)
+        }
+        &:not(:disabled):not(.disabled):active{
+            color: $primary-text-color;
+            background: darken($light-color, 10%);
+        }
+        &.btn-gradient {
+            background: linear-gradient(90deg, darken($light-color, 20%) 0%, $light-color 100%);
+            &:hover{
+                color: $primary-text-color;
+                background: linear-gradient(90deg, darken($light-color, 30%) 0%, darken($light-color, 10%) 100%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-color;
+                background: linear-gradient(90deg, darken($light-color, 30%) 0%, darken($light-color, 10%) 100%);
+            }
+        }
+    }
+    &.btn-dark {
+        background: $dark-color;
+        border: none;
+        color: $primary-text-inverse;
+        &:hover{
+            color: $primary-text-inverse;
+            background: darken($dark-color, 10%);
+        }
+        &:not(:disabled):not(.disabled):active{
+            color: $primary-text-inverse;
+            background: darken($dark-color, 10%);
+        }
+        &.btn-gradient {
+            background: linear-gradient(90deg, darken($dark-color, 30%) 0%, $dark-color 100%);
+            &:hover{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($dark-color, 30%) 0%, darken($dark-color, 10%) 100%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($dark-color, 30%) 0%, darken($dark-color, 10%) 100%);
+            }
+        }
+    }
+    &.btn-danger {
+        background: $error-color;
+        border: none;
+        color: $primary-text-inverse;
+        &:hover{
+            color: $primary-text-inverse;
+            background: darken($error-color, 10%);
+        }
+        &:not(:disabled):not(.disabled):active{
+            color: $primary-text-inverse;
+            background: darken($error-color, 10%);
+        }
+        &.btn-gradient {
+            background: linear-gradient(90deg, darken($error-color, 20%) 0%, $error-color 100%);
+            &:hover{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($error-color, 30%) 0%, darken($error-color, 10%) 100%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($error-color, 30%) 0%, darken($error-color, 10%) 100%);
+            }
+        }
+    }
+    &.btn-warning {
+        background: $warning-color;
+        border: none;
+        color: $primary-text-inverse;
+        &:hover{
+            color: $primary-text-inverse;
+            background: darken($warning-color, 10%);
+        }
+        &:not(:disabled):not(.disabled):active{
+            color: $primary-text-inverse;
+            background: darken($warning-color, 10%);
+        }
+        &.btn-gradient {
+            background: linear-gradient(90deg, darken($warning-color, 20%) 0%, $warning-color 100%);
+            &:hover{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($warning-color, 30%) 0%, darken($warning-color, 10%) 100%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($warning-color, 30%) 0%, darken($warning-color, 10%) 100%);
+            }
+        }
+    }
+    &.btn-info {
+        background: $info-color;
+        border: none;
+        color: $primary-text-inverse;
+        &:hover{
+            color: $primary-text-inverse;
+            background: darken($info-color, 10%);
+        }
+        &:not(:disabled):not(.disabled):active{
+            color: $primary-text-inverse;
+            background: darken($info-color, 10%);
+        }
+        &.btn-gradient {
+            background: linear-gradient(90deg, darken($info-color, 20%) 0%, $info-color 100%);
+            &:hover{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($info-color, 30%) 0%, darken($info-color, 10%) 100%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($info-color, 30%) 0%, darken($info-color, 10%) 100%);
+            }
+        }
+    }
+    &.btn-success {
+        background: $success-color;
+        border: none;
+        color: $primary-text-inverse;
+        &:hover{
+            color: $primary-text-inverse;
+            background: darken($success-color, 10%);
+        }
+        &:not(:disabled):not(.disabled):active{
+            color: $primary-text-inverse;
+            background: darken($success-color, 10%);
+        }
+        &.btn-gradient {
+            background: linear-gradient(90deg, darken($success-color, 20%) 0%, $success-color 100%);
+            &:hover{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($success-color, 30%) 0%, darken($success-color, 10%) 100%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($success-color, 30%) 0%, darken($success-color, 10%) 100%);
+            }
+        }
+    }
+    &.btn-brand{
+        background: $brand-gradient-to-color;
+        color: $primary-text-inverse;
+        &:hover{
+            color: $primary-text-inverse;
+            background: darken($brand-gradient-to-color, 10%);
+        }
+        &:not(:disabled):not(.disabled):active{
+            color: $primary-text-inverse;
+            background: darken($brand-gradient-to-color, 10%);
+        }
+        &.btn-gradient{
+            background: linear-gradient(90deg, $brand-gradient-from-color 0%, $brand-gradient-to-color 100%);
+            &:hover{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($brand-gradient-to-color, 30%) 0%, darken($brand-gradient-to-color, 10%) 100%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+                background: linear-gradient(90deg, darken($brand-gradient-to-color, 30%) 0%, darken($brand-gradient-to-color, 10%) 100%);
+            }
+        }
+    }
+    &.btn-inverse {
+        background: $secondary-background-color;
+        border: none;
+        color: $primary-text-color;
+        &:hover{
+            color: $primary-text-color;
+            background: darken($secondary-background-color, 5%);
+        }
+        &:not(:disabled):not(.disabled):active{
+            color: $primary-text-color;
+            background: darken($secondary-background-color, 10%);
+        }
+        &.btn-gradient {
+            background: linear-gradient(90deg, darken($secondary-background-color, 20%) 0%, $secondary-background-color 100%);
+            &:hover{
+                color: $primary-text-color;
+                background: linear-gradient(90deg, darken($secondary-background-color, 30%) 0%, darken($secondary-background-color, 10%) 100%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-color;
+                background: linear-gradient(90deg, darken($secondary-background-color, 30%) 0%, darken($secondary-background-color, 10%) 100%);
+            }
+        }
+    }
+    &.btn-link {
+        color: $info-color;
+    }
+    &.btn-rectangle {
+        border-radius: $border-radius-rectangle;
+    }
+    &.btn-capsule {
+        border-radius: $border-radius-capsule;
+    }
+    &.btn-elevated {
+        box-shadow: 0 3px 4px 0 $box-shadow-color;
+    }
+    &.btn-outline {
+        background: transparent;
+        border-style: $border-style;
+        border-width: $border-size;
+        &.btn-primary {
+            border-color: $primary-color;
+            color: $primary-color;
+            &:hover{
+                color: $primary-text-inverse;
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+            }
+        }
+        &.btn-secondary {
+            border-color: $secondary-color;
+            color: $secondary-text-color;
+            &:hover{
+                color: $primary-text-inverse;
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+            }
+        }
+        &.btn-light {
+            border-color: $light-color;
+            color: $primary-text-color;
+            &:hover{
+                color: $primary-text-color;
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-color;
+            }
+        }
+        &.btn-dark {
+            border-color: $dark-color;
+            color: $dark-color;
+            &:hover{
+                color: $primary-text-inverse;
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+            }
+        }
+        &.btn-danger {
+            border-color: $error-color;
+            color: $error-color;
+            &:hover{
+                color: $primary-text-inverse;
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+            }
+        }
+        &.btn-warning {
+            border-color: $warning-color;
+            color: $warning-color;
+            &:hover{
+                color: $primary-text-inverse;
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+            }
+        }
+        &.btn-info {
+            border-color: $info-color;
+            color: $info-color;
+            &:hover{
+                color: $primary-text-inverse;
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+            }
+        }
+        &.btn-success {
+            border-color: $success-color;
+            color: $success-color;
+            &:hover{
+                color: $primary-text-inverse;
+            }
+            &:not(:disabled):not(.disabled):active{
+                color: $primary-text-inverse;
+            }
+        }
+    }
+    &.tone-solid {
+        &.btn-primary {
+            background: lighten($primary-color, 30%);
+            color: $primary-color;
+            &:hover{
+                background: lighten($primary-color, 40%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                background: lighten($primary-color, 40%);
+            }
+        }
+        &.btn-secondary {
+            background: lighten($secondary-color, 30%);
+            color: $secondary-text-color;
+            &:hover{
+                background: lighten($secondary-color, 40%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                background: lighten($secondary-color, 40%);
+            }
+        }
+        &.btn-light {
+            background: lighten($light-color, 5%);
+            color: lighten($primary-text-color, 50%);
+            &:hover{
+                background: lighten($light-color, 10%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                background: lighten($light-color, 10%);
+            }
+        }
+        &.btn-dark {
+            background: lighten($dark-color, 30%);
+            color: $dark-color;
+            &:hover{
+                background: lighten($dark-color, 40%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                background: lighten($dark-color, 40%);
+            }
+        }
+        &.btn-danger {
+            background: lighten($error-color, 30%);
+            color: $error-color;
+            &:hover{
+                background: lighten($error-color, 40%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                background: lighten($error-color, 40%);
+            }
+        }
+        &.btn-warning {
+            background: lighten($warning-color, 30%);
+            color: $warning-color;
+            &:hover{
+                background: lighten($warning-color, 40%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                background: lighten($warning-color, 40%);
+            }
+        }
+        &.btn-info {
+            background: lighten($info-color, 30%);
+            color: $info-color;
+            &:hover{
+                background: lighten($info-color, 40%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                background: lighten($info-color, 40%);
+            }
+        }
+        &.btn-success {
+            background: lighten($success-color, 30%);
+            color: $success-color;
+            &:hover{
+                background: lighten($success-color, 40%);
+            }
+            &:not(:disabled):not(.disabled):active{
+                background: lighten($success-color, 40%);
+            }
+        }
+    }
+    &.btn-disabled {
+        &.btn-primary {
+            background: lighten($primary-color, 30%);
+            color: lighten($primary-color, 40%)
+        }
+        &.btn-secondary {
+            background: lighten($secondary-color, 30%);
+            color: lighten($secondary-text-color, 40%)
+        }
+        &.btn-light {
+            background: lighten($light-color, 5%);
+            color: lighten($primary-text-color, 70%);
+        }
+        &.btn-dark {
+            background: lighten($dark-color, 30%);
+            color: lighten($dark-color, 40%)
+        }
+        &.btn-danger {
+            background: lighten($error-color, 30%);
+            color: lighten($error-color, 40%)
+        }
+        &.btn-warning {
+            background: lighten($warning-color, 30%);
+            color: lighten($warning-color, 40%)
+        }
+        &.btn-info {
+            background: lighten($info-color, 30%);
+            color: lighten($info-color, 40%)
+        }
+        &.btn-success {
+            background: lighten($success-color, 30%);
+            color: lighten($success-color, 40%)
+        }
+    }
+    &.btn-icon {
+        font-size: 18px;
+        padding: 0.6rem 0.8rem;
+        line-height: 0;
+        .material-icons {
+            font-size: 1rem;
+            line-height: 1.2rem;
+            vertical-align: text-bottom;
+        }
+        svg {
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            fill: $primary-text-inverse;
+            vertical-align: text-bottom;
+        }
+        &.btn-light {
+            svg {
+                fill: $primary-text-color
+            }
+        }
+        &.btn-small,
+        &.btn-sm {
+            padding: 0.5rem 0.6rem;
+        }
+    }
+    &.btn-icon-text {
+        .material-icons {
+            font-size: 1rem;
+            line-height: 1.2rem;
+            vertical-align: text-bottom;
+            & +.text {
+                padding-right: 0;
+                padding-left: 0.6rem;
+            }
+        }
+        svg {
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            fill: white;
+            vertical-align: text-bottom;
+            & +.text {
+                padding-right: 0;
+                padding-left: 0.6rem;
+            }
+        }
+        & > .text {
+            padding-right: 0.6rem;
+        }
+    }
+    &.btn-small,
+    &.btn-sm {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+    &.btn-large,
+    &.btn-lg {
+        padding: 0.7rem 1.2rem;
+    }
+    &.btn-extra-large {
+        padding: 1.2rem 1.6rem;
+    }
+}

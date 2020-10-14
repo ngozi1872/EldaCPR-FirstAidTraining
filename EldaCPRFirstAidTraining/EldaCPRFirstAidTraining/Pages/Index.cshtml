@@ -19,7 +19,7 @@
                                 <div class="slider-para wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 </div>
-                                <div class="slider-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">                                 
+                                <div class="slider-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
                                 </div>
                             </div>
                         </div>
@@ -55,21 +55,96 @@
 <section class="welcome-area">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="welcome-box">
-                    <h4>Welcome To Mediseba</h4>
-                    <img src="images/heartbeat.png" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem quod facere praesentium odit. Repellat porro et laudantium, atque similique distinctio.<br> Nemo quidem obcaecati aut possimus, voluptatibus dignissimos facilis sit. Qui.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ipsum, ut! Numquam nesciunt, ex obcaecati libero asperiores reprehenderit ratione minus commodi magni fugit non nemo quas dolorum nisi ducimus laboriosam!</p>
-                    <a href="">Read More</a>
+            @*<div class="col-md-6">
+                    <div class="rg-card-simple equal-height">
+                        <header>
+                            <h5>Simple Table</h5>
+                        </header>
+                        <section>
+                            <table class="table rg-table rg-table-simple">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Handle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>fat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>twitter</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                </div>*@
+            <div class="col-md-12">
+                <div class="rg-card-simple">
+                    <header></header>
+                    <section>
+                        <div id='calendar'></div>
+                    </section>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="about-image">
-                    <img src="images/about.jpg" alt="" class="img-fluid">
-                </div>
+                <input asp-for="@Model.UpComingTraining" hidden id="defaultDate" />
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="model-box">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="medel-box-top">
+                    <h4 id="courseTitle">Register</h4>
+                    <img src="images/heartbeat.png" alt="">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+                <div id="descriptTxt"></div>
+                <br />
+                <form  method="post" asp-page="Index" asp-page-handler="AddVoluntaryForEvent">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="text" name="phone" placeholder="Phone Number" required>
+                    <input type="text" name="email" placeholder="Email Address" required>
+                    <input type="text" id="datetimepicker" data-toggle="datetimepicker" data-target="#datetimepicker" name="appdate" placeholder="Appointment Date">
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    @*<div id="fullCalModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
+                        <h4 id="modalTitle" class="modal-title"></h4>
+                    </div>
+                    <div id="modalBody" class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <a class="btn btn-primary" id="eventUrl" target="_blank">Event Page</a>
+                    </div>
+                </div>
+            </div>
+        </div>*@
 </section>
 <!-- End Service Area -->
 <!-- About Instructor -->
@@ -83,7 +158,7 @@
                     <h5 style="color:#fff">Master of Science: Nursing, Wilmington University </h5><br />
                     <p>
                         I am a certified American Heart Association BLS Instructor who has over 14 years of nursing experience working labor and delivery, postpartum,
-                        newborn nursery, medical-surgical, nurse manager, and clinical nurse supervisor at major intercity hospitals in Philadelphia, PA.  
+                        newborn nursery, medical-surgical, nurse manager, and clinical nurse supervisor at major intercity hospitals in Philadelphia, PA.
                         I have experience in responding to emergency situations (RRT, Code Blue) and assisting as necessary.
                     </p>
                 </div>
@@ -126,7 +201,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="news-box"  style="height:100%">
+                <div class="news-box" style="height:100%">
                     <div class="news-image">
                         <a href=""><img src="images/COURS1.jpg" alt="" class="img-fluid"></a>
                     </div>
@@ -150,7 +225,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="news-box"  style="height:100%">
+                <div class="news-box" style="height:100%">
                     <div class="news-image">
                         <a href=""><img src="images/COURS2.jpg" alt="" class="img-fluid"></a>
                     </div>
@@ -224,7 +299,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="pricing-box"  style="height:95%">
+                <div class="pricing-box" style="height:95%">
                     <ul class="list-unstyled">
                         <li>
                             Did you know sudden cardiac arrest is the leading cause of adult death in this country and that most cardiac arrests happen in someone’s home?
@@ -244,7 +319,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="pricing-box"  style="height:95%">
+                <div class="pricing-box" style="height:95%">
                     <ul class="list-unstyled">
                         <li>Information regarding our class offerings and location can be found on our calendar above.</li>
                         <li>We give 10% off on group rates for groups greater than 10 people.</li>
@@ -275,3 +350,49 @@
     </div>
 </section>
 <!-- End Pricing -->
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <style>
+        .fc-title {
+            color: white;
+            /*background-color: #5ebb47;*/
+        }
+        
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var mydefaultDate = $("#defaultDate").val();
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+              plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
+              height: 'parent',
+              header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                },
+                eventClick: function (event) {
+                    //alert('Event: ' + event.event.extendedProps.description);
+                    $('#courseTitle').html('Register for '+ event.event.title);
+                    $('#descriptTxt').html(event.event.extendedProps.description);
+                    $('#eventUrl').attr('href', event.event.url);
+                    $('#model-box').modal();
+                    return false;
+                },
+              defaultView: 'dayGridMonth',
+              defaultDate: mydefaultDate,
+              navLinks: true, // can click day/week names to navigate views
+              editable: true,
+              eventLimit: true, // allow "more" link when too many events
+                events: '@Url.Page("/Index", "FindAllEvents")',
+                eventColor: '#00a3c8'
+            });
+
+            calendar.render();
+  });
+
+    </script>
+}

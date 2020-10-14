@@ -2,43 +2,56 @@
 
 <html>
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Elda CPR & First Aid Training</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Elda CPR & First Aid Training</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
 
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="css/assets/bootstrap.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/assets/bootstrap.min.css">
 
-        <!-- Fontawesome Icon -->
-        <link rel="stylesheet" href="css/assets/font-awesome.min.css">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="css/assets/font-awesome.min.css">
 
-        <!-- Animate Css -->
-        <link rel="stylesheet" href="css/assets/animate.css">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="css/assets/animate.css">
 
-        <!-- Owl Slider -->
-        <link rel="stylesheet" href="css/assets/owl.carousel.min.css">
+    <!-- Owl Slider -->
+    <link rel="stylesheet" href="css/assets/owl.carousel.min.css">
 
-        <!-- Date Picker -->
-        <link rel="stylesheet" href="css/assets/tempusdominus-bootstrap-4.min.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="css/assets/tempusdominus-bootstrap-4.min.css">
 
-        <!-- Magnific PopUp -->
-        <link rel="stylesheet" href="css/assets/magnific-popup.css">
+    <!-- Magnific PopUp -->
+    <link rel="stylesheet" href="css/assets/magnific-popup.css">
 
-        <!-- Custom Style -->
-        <link rel="stylesheet" href="css/assets/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/assets/responsive.css">
-   
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/assets/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/assets/responsive.css">
+
+    <!-- keep either rlt or ltr bootstrap css... DON"T Include both even with comment -->
+    <link href="~/vendors/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/vendors/css/perfect-scrollbar.css" rel="stylesheet" />
+    <link href="~/vendors/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <link href="~/vendors/css/responsive.dataTables.min.css" rel="stylesheet" />
+    <link href="~/vendors/js/fullcalendar/core/main.css" rel='stylesheet' />
+    <link href="~/vendors/js/fullcalendar/daygrid/main.css" rel='stylesheet' />
+    <link href="~/vendors/js/fullcalendar/timegrid/main.css" rel='stylesheet' />
+
+    <link href="~/vendors/js/fullcalendar/list/main.css" rel='stylesheet' />
+    <link href="~/vendors/css/jquery.slider.min.css" rel="stylesheet" />
+
 </head>
 <body>
     <!-- Preloader -->
@@ -86,12 +99,14 @@
                                     <div class="modal-dialog modal-dialog-centered">
                                         <div class="modal-content text-center">
                                             <div class="medel-box-top">
-                                                <h4>Book An Appointment</h4>
+                                                <h4 id="courseTitle">Register</h4>
                                                 <img src="images/heartbeat.png" alt="">
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <i class="fa fa-times"></i>
                                                 </button>
                                             </div>
+                                            <div id="descriptTxt"></div>
+                                            <br />
                                             <form action="#">
                                                 <input type="text" name="name" placeholder="Full Name" required>
                                                 <input type="text" name="phone" placeholder="Phone Number" required>
@@ -247,5 +262,16 @@
     <!-- Custom JS -->
     <script src="js/plugins.js"></script>
     <script src="js/custom.js"></script>
+
+    <!-- Vendor Js -->
+  
+    <!--Fullcalendar-->
+    <script src="~/vendors/js/fullcalendar/core/main.js"></script>
+    <script src="~/vendors/js/fullcalendar/interaction/main.js"></script>
+    <script src="~/vendors/js/fullcalendar/daygrid/main.js"></script>
+    <script src="~/vendors/js/fullcalendar/timegrid/main.js"></script>
+    <script src="~/vendors/js/fullcalendar/list/main.js"></script>
+
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

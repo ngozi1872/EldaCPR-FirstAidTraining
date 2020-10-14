@@ -1,0 +1,196 @@
+/*******************************************************/
+/* Users default list page */
+/*******************************************************/
+.user-default-list{
+    display: flex;
+    .left-pane{
+        flex: 1;
+        background-color: $secondary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+    }
+    .right-pane{
+        flex: 5;
+        padding: 1em;
+    }
+    header{
+        margin-bottom:1.5rem;
+        .user-info-container{
+            display: flex;
+            border-bottom: 1px solid #e6e8ec;
+            width: 100%;
+            .user-info{
+                margin-bottom: 1rem;
+                h6{
+                    margin-bottom: 0;
+                }
+            }
+            .user-details{
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    section{
+        padding-bottom: 1.5rem;
+        .attribute-container{
+            display: flex;
+            .attribute{
+                display: flex;
+                align-items: center;
+                > span{
+                    margin-top: 10px;
+                    margin-right: 1rem;
+                    font-size: 3em;
+                    color: lighten($secondary-color, 20%);
+                }
+                div{
+                    h4{
+                        margin-bottom: 0;
+                    }
+                    span{
+                        @include font-size(14px);
+                        color: $secondary-text-color;
+                    }
+                }
+            }
+        }
+    
+        .linked-users{
+            display: flex;
+            align-items: center;
+            h4{
+                margin-left: 0.6rem;
+                margin-top: 0.3rem;
+            }
+            img{
+                width: 2.8rem;
+                height: 2.8rem;
+                border-radius: 100%;
+                border: $border-style $border-size $border-color;
+            }
+            img + img{
+                margin-left: -1em;
+            }
+        }
+    }
+} 
+
+/*******************************************************/
+/* Users cards page */
+/*******************************************************/
+
+.user-card{
+    header{
+        position: relative;
+        min-height: 12rem;
+        .user-wall-image{
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+            border-radius: $border-radius;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .user-image{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            z-index: 1;
+            margin: auto;
+            transform: translate(-50%, 50%);
+        }
+    }
+    section {     
+        .social-media{
+            border-top: dashed $border-size $border-color;
+            border-bottom: dashed $border-size $border-color;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            display:flex;
+            justify-content: center;
+        }    
+        .user-card-action{
+            button{
+                width: 100%;
+            }
+        }
+    }
+    
+}
+
+/*******************************************************/
+/* Users data table page */
+/*******************************************************/
+
+.user-data-table {
+    .company-info{
+        display: flex;
+        img{
+            margin-right: 0.5rem;
+        }
+        p{
+            margin-bottom: 0;
+        }
+        .name{
+            margin-bottom: 0;
+        }
+        .location{
+            color: $secondary-text-color;
+        }
+        
+    }
+    table{
+        .rg-status-badge{
+            width: 6.5rem;
+            display: inline-block;
+            text-align: center;
+        }
+    }
+    table.dataTable thead th.select-all-container{
+        padding-left:0.6rem;
+    }
+}
+
+
+/*******************************************************/
+/* Users Create and edit page */
+/*******************************************************/
+.profile-photo{
+    display: flex;
+    img{
+        margin-right: 1rem;
+    }
+}
+
+
+/*******************************************************/
+/* media queries */
+/*******************************************************/
+
+@media(max-width: 568px){
+    .user-default-list {
+        header {
+            .heading{
+                display: block;
+            }
+        }
+    }
+    .user-card {
+        .heading{
+            display: block;
+            .user-info{
+                margin-left: 0;
+            }
+        }
+    }
+}

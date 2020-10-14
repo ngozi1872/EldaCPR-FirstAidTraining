@@ -1,0 +1,146 @@
+html{
+    font-size: 16px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    @include font-size(14px);
+    font-weight: 400;
+    color: $primary-text-color;
+}
+a, a:active, a:hover, a:focus{
+    color: $link-color;
+    text-decoration: none;
+    outline: none;
+    @include font-size(14px);
+}
+p{
+    @include font-size(14px);
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+h1, .h1{
+    font-size: 2.25rem;
+}
+h2, .h2{
+    font-size: 2rem;
+}
+h3, .h3{
+    font-size: 1.75rem;
+}
+h4, .h4{
+    font-size: 1.5rem;
+}
+h5, .h5{
+    font-size: 1.25rem;
+}
+h6, .h6{
+    font-size: 1rem;
+}
+
+.display-extra-large{
+    font-weight: 700;
+    font-size: 3rem;
+}
+.display-large{
+    font-weight: 700;
+    font-size: 2.75rem;
+}
+.display-medium{
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.display-regular{
+    font-weight: 700;
+    font-size: 1.625rem;
+}
+
+.display-small{
+    font-weight: 700;
+    font-size: 1.375rem;
+}
+
+.display-extra-small{
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+.text-extra-large{
+    font-size: 1.5rem;
+}
+.text-large{
+    font-size: 1.25rem;
+}
+.text-medium{
+    font-size: 1rem;
+}
+.text-small{
+    font-size: 0.8rem;
+}
+.text-center{
+    text-align: center;
+}
+
+.text-primary{
+    color: $primary-text-color !important;
+}
+.text-secondary{
+    color: $secondary-text-color !important;
+}
+
+.text-highlight-primary{
+    color: $primary-color !important;
+}
+.text-highlight-secondary{
+    color: $secondary-color !important;
+}
+.text-highlight-light{
+    color: $light-color !important;
+}
+.text-highlight-dark{
+    color: $dark-color !important;
+}
+.text-highlight-error{
+    color: $error-color !important;
+}
+.text-highlight-warning{
+    color: $warning-color !important;
+}
+.text-highlight-info{
+    color: $info-color !important;
+}
+.text-highlight-success{
+    color: $success-color !important;
+}
+
+.text-highlight-primary-inverse{
+    color: $primary-text-inverse !important;
+}
+
+.link{
+    color: $link-color;
+}
+.text-thin{
+    font-weight: 300;
+}
+.text-normal{
+    font-weight: 400;
+}
+.text-weight-500{
+    font-weight: 500;
+}
+.text-weight-600{
+    font-weight: 600;
+}
+.text-weight-700{
+    font-weight: 700;
+}
+.ellipsis{
+    @include ellipsis;
+}
+
+@media (max-width: 1600px){
+    html{
+        font-size: 14px;
+    }
+}

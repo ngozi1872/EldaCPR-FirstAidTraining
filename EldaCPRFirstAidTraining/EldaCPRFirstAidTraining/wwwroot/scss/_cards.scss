@@ -1,0 +1,483 @@
+@mixin rg-card() {
+    background: $secondary-background-color;
+    box-shadow: 0 0 30px 0 $box-shadow-color;
+    border: none;
+    margin-bottom: 2rem;
+    border-radius: $border-radius;
+    
+    &.no-header section{
+      padding: 1rem;
+    }
+  
+    & > header {
+      margin-bottom: 2rem;
+      padding: 1rem 1rem 0;
+      @include clearfix;
+  
+      h1, h2, h3, h4, h5, h6{
+        margin-bottom: 0;
+        color: $primary-text-color;
+  
+        &+span {
+          @include font-size(14px);
+          color: $secondary-text-color;
+        }
+      }
+    }
+  
+    & > section {
+      padding: 0 1rem 1rem;
+    }
+  
+    &.equal-height {
+      height: calc(100% - 2rem);
+    }
+  
+    & > footer {
+      display: flex;
+      padding: 0 1rem 1rem;
+    }
+  }
+
+.rg-card-simple {
+    @include rg-card;
+}
+
+.background-pattern-01{
+    background: url(../images/background-pattern-01.png) repeat left top;
+}
+.background-pattern-02{
+    background: url(../images/background-pattern-02.png) no-repeat center center;
+}
+
+.rg-card-tabs {
+    @include rg-card;
+    header {
+        .heading {
+            float: left;
+        }
+
+        .inline-tabs {
+            float: right;
+
+            ul {
+                margin: 0;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        color: lighten($primary-text-color, 50%);
+                        @include font-size(12px);
+                        font-weight: 500;
+                        padding: 0.3rem 0.8rem;
+
+                        &.active {
+                            background: lighten($info-color, 40%);
+                            color: $info-color;
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.rg-card-action {
+    @include rg-card;
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        .inline-actions {
+            position: relative;
+            margin-left: auto;
+            span {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.rg-card-highlight-header {
+    @include rg-card;
+    padding: 0;
+
+    header {
+        position: relative;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        min-height: 12rem;
+        h1, h2, h3, h4, h5, h6{
+            color: $primary-text-inverse;
+
+            &+span {
+                color: $primary-text-inverse;
+            }
+        }
+
+        .inline-actions {
+            span {
+                color: $secondary-background-color;
+            }
+        }
+
+        .heightlight-content {
+            @include clearfix;
+            margin: 2rem 0 0;
+            flex-basis: 100%;
+            h1, h2, h3, h4, h5, h6{
+                color: $primary-text-inverse;
+                float: none;
+                span {
+                    padding: 0 0 0 0.7rem;
+                }
+            }
+            &.floating-highlight-content{
+                position: absolute;
+                left: 1rem;
+                bottom: 0;
+            }
+        }
+    }
+
+    &.heightlight-primary {
+        header {
+            background: $primary-color;
+        }
+    }
+
+    &.heightlight-secondary {
+        header {
+            background: $secondary-color;
+        }
+    }
+
+    &.heightlight-light {
+        header {
+            background: $light-color;
+        }
+    }
+
+    &.heightlight-dark {
+        header {
+            background: $dark-color;
+        }
+    }
+
+    &.heightlight-error {
+        header {
+            background: $error-color;
+        }
+    }
+
+    &.heightlight-warning {
+        header {
+            background: $warning-color;
+        }
+    }
+
+    &.heightlight-info {
+        header {
+            background: $info-color;
+        }
+    }
+
+    &.heightlight-success {
+        header {
+            background: $success-color;
+        }
+    }
+}
+
+.rg-card-solid-skin {
+    @include rg-card;
+    header {
+        h1, h2, h3, h4, h5, h6{
+            color: $primary-text-inverse;
+            & + span{
+                color: $primary-text-inverse;
+            }
+        }
+    }
+    &.skin-primary {
+        background: $primary-color;
+        color: $primary-text-inverse;
+    }
+
+    &.skin-secondary {
+        background: $secondary-color;
+        color: $primary-text-inverse;
+    }
+
+    &.skin-light {
+        background: $light-color;
+        color: $primary-text-inverse;
+    }
+
+    &.skin-dark {
+        background: $dark-color;
+        color: $primary-text-inverse;
+    }
+
+    &.skin-error {
+        background: $error-color;
+        color: $primary-text-inverse;
+    }
+
+    &.skin-warning {
+        background: $warning-color;
+        color: $primary-text-inverse;
+    }
+
+    &.skin-info {
+        background: $info-color;
+        color: $primary-text-inverse;
+    }
+
+    &.skin-success {
+        background: $success-color;
+        color: $primary-text-inverse;
+    }
+}
+
+.rg-card-header-image{
+    @include rg-card;
+    header{
+        position: relative;
+        overflow: hidden;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        padding: 0;
+        img{
+            position: relative;
+        }
+        .heading{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 1rem;
+            width: 100%;
+            background-color: rgba($box-shadow-color, 0.3);
+            h1, h2, h3, h4, h5, h6{
+                color: $primary-text-inverse;
+                & + span{
+                    color: $primary-text-inverse;
+                }
+            }
+
+        }
+    }
+}
+
+.rg-card-social-media{
+    @include rg-card;
+    &.light{
+        background: $secondary-background-color;
+    }
+    &.dark{
+        background: rgb(49, 26, 65);
+        background: linear-gradient(0deg, $aside-gradient-from-color 0%, $aside-gradient-to-color 100%);
+        color: $primary-text-inverse;
+        header{
+            .heading{
+                h1, h2, h3, h4, h5, h6{
+                    color: $primary-text-inverse;
+                }
+            }
+        }
+    }
+    .user-details{
+        margin-bottom: 1.5rem;
+        .user-pic{
+            box-shadow: 0 0 1rem 0.3rem $box-shadow-color;
+            border-radius: 5rem;
+            width: 10rem;
+            height: 10rem;
+            display: inline-block;
+            overflow: hidden;
+            margin: 1.5rem 0 0.5rem;
+            img {
+                max-width: 10rem;
+            }
+        }
+    }
+    .action{
+        button{
+            min-width: 8rem;
+        }
+        margin-bottom: 1.5rem;
+    }
+}
+
+.rg-card-ecommerce{
+    @include rg-card;
+    &.light{
+        background: $secondary-background-color;
+    }
+    .product-details{
+        .product-pic{
+            img{
+                max-width: 100%;
+            }
+        }
+        .product-heading{
+            margin-top: 1.5rem;
+            display: flex;
+            .rating{
+                .material-icons{
+                    letter-spacing: -3px;
+                    @include font-size(20px);
+                }
+            }
+        }
+        h4{
+            margin: 0;
+            @include font-size(16px);
+        }
+        p{
+            @include font-size(14px);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 1.5rem;
+            white-space: pre;
+        }
+    }
+}
+
+.rg-card-data-tile {
+    display: flex;
+    margin-bottom: 1rem;
+    .tile-icon {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.primary {
+            background: $primary-color;
+        }
+        &.secondary {
+            background: $secondary-color;
+        }
+        &.light {
+            background: $light-color;
+        }
+        &.dark {
+            background: $dark-color;
+        }
+        &.error {
+            background: $error-color;
+        }
+        &.warning {
+            background: $warning-color;
+        }
+        &.info {
+            background: $info-color;
+        }
+        &.success {
+            background: $success-color;
+        }
+        span {
+            color: $primary-text-inverse;
+        }
+    }
+    .tile-data {
+        display: flex;
+        width: calc(100% - 4rem);
+        padding-left: 0.8rem;
+        flex-direction: column;
+        h2 {
+            margin: 0;
+        }
+        span {
+            color: $secondary-text-color;
+        }
+    }
+}
+
+.rg-card-statistics{
+    @include rg-card;
+    &.highlight-primary{
+        border-bottom: $border-style 4px $primary-color;
+    }
+    &.highlight-secondary{
+        border-bottom: $border-style 4px $secondary-color;
+    }
+    &.highlight-light{
+        border-bottom: $border-style 4px $light-color;
+    }
+    &.highlight-dark{
+        border-bottom: $border-style 4px $dark-color;
+    }
+    &.highlight-error{
+        border-bottom: $border-style 4px $error-color;
+    }
+    &.highlight-warning{
+        border-bottom: $border-style 4px $warning-color;
+    }
+    &.highlight-info{
+        border-bottom: $border-style 4px $info-color;
+    }
+    &.highlight-success{
+        border-bottom: $border-style 4px $success-color;
+    }
+    .statistics-data{
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        & > *{
+            position: relative;
+        }
+        &:before{
+            content: "";
+            display: block;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            position: absolute;
+            z-index: 0;
+            @extend .background-pattern-01;
+        }
+    }
+}
+
+.rg-card-chart-elated{
+    @include rg-card;
+    margin-top: 30px;
+    .elated-chart{
+        @include rg-card;
+        margin-top: -45px;
+        height: 200px;
+        width: 100%;
+    }
+    .time{
+        border-top: $border-size $border-style $border-color;
+    }
+    .stat-blocks{
+        
+        .text-block {
+            padding: 0.5rem;
+            flex: 1;
+            border: $border-size $border-style $border-color;
+            .icon{
+                .fa, .fab, .fas{
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+}
+
+.rg-card-numbers{
+    @include rg-card;
+    .rg-badge.rg-badge-xl{
+        padding: 1rem;
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,132 @@
+.rg-badge{
+    display: inline-block;
+    padding: 0.45em .55em;;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    color:$primary-text-inverse;
+    transition: all .15s ease-in-out;
+    &.rg-badge-primary{
+        background-color: $primary-color;
+    }
+    &.rg-badge-secondary{
+        background-color: $secondary-color;
+    }
+    &.rg-badge-light{
+        background-color: $light-color;
+        color:$primary-text-color;
+    }
+    &.rg-badge-dark{
+        background-color: $dark-color;
+    }
+    &.rg-badge-error{
+        background-color: $error-color;
+    }
+    &.rg-badge-warning{
+        background-color: $warning-color;
+    }
+    &.rg-badge-info{
+        background-color: $info-color;
+    }
+    &.rg-badge-success{
+        background-color: $success-color;
+    }
+    &.rg-badge-square{
+        border-radius: unset;
+    }
+    &.rg-badge-round{
+        border-radius: 50%;
+    }
+    &.rg-badge-round-lg-text{
+        border-radius: 1rem;
+    }
+    &.rg-badge-outline-round{
+        border-radius: 50%;        
+        border:1px solid;
+    }
+    &.rg-badge-outline-round-lg-text{
+        border-radius: 1rem;        
+        border:1px solid;
+    }
+    &.rg-badge-outline-round-primary{
+        border-color: $primary-color;
+        color: $primary-color;
+    }
+    &.rg-badge-outline-round-secondary{
+        border-color: $secondary-color;
+        color: $secondary-text-color;
+    }
+    &.rg-badge-outline-round-light{
+        border-color: $light-color;
+        color: $primary-text-color;
+    }
+    &.rg-badge-outline-round-dark{
+        border-color: $dark-color;
+        color: $dark-color;
+    }
+    &.rg-badge-outline-round-error{
+        border-color: $error-color;
+        color: $error-color;
+    }
+    &.rg-badge-outline-round-warning{
+        border-color: $warning-color;
+        color: $warning-color;
+    }
+    &.rg-badge-outline-round-info{
+        border-color: $info-color;
+        color: $info-color;
+    }
+    &.rg-badge-outline-round-success{
+        border-color: $success-color;
+        color: $success-color;
+    }
+    &.rg-badge-highlight{
+        padding:.5rem 1rem;;
+    }
+    &.rg-badge-highlight-primary{
+        background: lighten($primary-color, 40%);
+        color: $primary-color;     
+    }
+    &.rg-badge-highlight-secondary{
+        background: lighten($secondary-color, 30%);
+        color: $secondary-text-color;    
+    }
+    &.rg-badge-highlight-light{
+        background: lighten($light-color, 2%);
+        color: lighten($primary-text-color, 50%);
+    }
+    &.rg-badge-highlight-dark{
+        background: lighten($dark-color, 20%);
+        color: $primary-text-inverse;
+    }
+    &.rg-badge-highlight-error{
+        background: lighten($error-color, 30%);
+        color: $error-color;     
+    }
+    &.rg-badge-highlight-warning{
+        background: lighten($warning-color, 30%);
+        color: $warning-color;   
+    }
+    &.rg-badge-highlight-info{
+        background: lighten($info-color, 40%);
+        color: $info-color;     
+    }
+    &.rg-badge-highlight-success{
+        background: lighten($success-color, 36%);
+        color: $success-color;
+    }
+    &.rg-badge-md{
+        padding:0.55em .75em;
+    }
+    &.rg-badge-lg{
+        padding:0.75em 1em;
+        font-size: 1rem;
+    }
+    &.rg-badge-xl{
+        padding:0.75em 1em;
+        font-size: 1.2rem;
+    }
+}

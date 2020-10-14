@@ -1,0 +1,94 @@
+.material-icons {
+    &.primary {
+        color: $primary-color !important;
+        &.link{
+            cursor: pointer;
+            &:hover{
+                @include transition(0, all, 0.5s, ease);
+                border-radius: $border-radius;
+                background: lighten($primary-color, 50%);
+            }
+        }
+    }
+    &.secondary {
+        color: $secondary-color !important;
+        &.link{
+            cursor: pointer;
+            &:hover{
+                @include transition(0, all, 0.5s, ease);
+                border-radius: $border-radius;
+                background: lighten($secondary-color, 30%);
+            }
+        }
+    }
+    &.light {
+        color: $light-color !important;
+        &.link{
+            cursor: pointer;
+            &:hover{
+                @include transition(0, all, 0.5s, ease);
+                border-radius: $border-radius;
+                background: lighten($light-color, 5%);
+            }
+        }
+    }
+    &.dark {
+        color: $dark-color !important;
+        &.link{
+            cursor: pointer;
+            &:hover{
+                @include transition(0, all, 0.5s, ease);
+                border-radius: $border-radius;
+                background: lighten($dark-color, 60%);
+            }
+        }
+    }
+    &.error {
+        color: $error-color !important;
+        &.link{
+            cursor: pointer;
+            &:hover{
+                @include transition(0, all, 0.5s, ease);
+                border-radius: $border-radius;
+                background: lighten($error-color, 30%);
+            }
+        }
+    }
+    &.warning {
+        color: $warning-color !important;
+        &.link{
+            cursor: pointer;
+            &:hover{
+                @include transition(0, all, 0.5s, ease);
+                border-radius: $border-radius;
+                background: lighten($warning-color, 30%);
+            }
+        }
+    }
+    &.info {
+        color: $info-color !important;
+        &.link{
+            cursor: pointer;
+            &:hover{
+                @include transition(0, all, 0.5s, ease);
+                border-radius: $border-radius;
+                background: lighten($info-color, 40%);
+            }
+        }
+    }
+    &.success {
+        color: $success-color !important;
+        &.link{
+            cursor: pointer;
+            &:hover{
+                @include transition(0, all, 0.5s, ease);
+                border-radius: $border-radius;
+                background: lighten($success-color, 35%);
+            }
+        }
+    }
+}
+
+.fab, .fas, .fa{
+    font-size: 1.5rem;
+}

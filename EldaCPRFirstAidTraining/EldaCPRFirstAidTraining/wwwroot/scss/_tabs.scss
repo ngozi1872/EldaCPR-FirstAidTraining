@@ -1,0 +1,307 @@
+.rg-tabs {
+    .nav-item{
+        .nav-link{
+            font-weight: 500;
+            color: $secondary-text-color;
+            .material-icons, .fa, .fab, .fas{
+                vertical-align: middle;
+                margin-right: 0.5rem;
+                @include font-size(20px);
+            }
+        }
+    }
+    .rg-outline-tabs{
+        .nav-link:hover{
+            border-color: $light-color;
+            border-bottom-color: $secondary-background-color;
+        }
+        &.primary{
+            border-bottom: $border-style $border-size $primary-color;
+            .nav-link.active{
+                border-color: $primary-color $primary-color $secondary-background-color;
+            }
+        }
+        &.secondary{
+            border-bottom: $border-style $border-size $secondary-color;
+            .nav-link.active{
+                border-color: $secondary-color $secondary-color $secondary-background-color;
+            }
+        }
+        &.light{
+            border-bottom: $border-style $border-size $light-color;
+            .nav-link.active{
+                border-color: $light-color $light-color $secondary-background-color;
+            }
+        }
+        &.dark{
+            border-bottom: $border-style $border-size $dark-color;
+            .nav-link.active{
+                border-color: $dark-color $dark-color $secondary-background-color;
+            }
+        }
+        &.error{
+            border-bottom: $border-style $border-size $error-color;
+            .nav-link.active{
+                border-color: $error-color $error-color $secondary-background-color;
+            }
+        }
+        &.warning{
+            border-bottom: $border-style $border-size $warning-color;
+            .nav-link.active{
+                border-color: $warning-color $warning-color $secondary-background-color;
+            }
+        }
+        &.info{
+            border-bottom: $border-style $border-size $info-color;
+            .nav-link.active{
+                border-color: $info-color $info-color $secondary-background-color;
+            }
+        }
+        &.success{
+            border-bottom: $border-style $border-size $success-color;
+            .nav-link.active{
+                border-color: $success-color $success-color $secondary-background-color;
+            }
+        }
+    }
+    .rg-pills{
+        .nav-link:hover{
+            background-color: $light-color;
+        }
+        &.primary{
+            .nav-link.active{
+                background-color: $primary-color;
+                color: $primary-text-inverse;
+            }
+        }
+        &.secondary{
+            .nav-link.active{
+                background-color: $secondary-color;
+                color: $primary-text-inverse;
+            }
+        }
+        &.light{
+            .nav-link.active{
+                background-color: $light-color;
+                color: $primary-text-inverse;
+            }
+        }
+        &.dark{
+            .nav-link.active{
+                background-color: $dark-color;
+                color: $primary-text-inverse;
+            }
+        }
+        &.error{
+            .nav-link.active{
+                background-color: $error-color;
+                color: $primary-text-inverse;
+            }
+        }
+        &.warning{
+            .nav-link.active{
+                background-color: $warning-color;
+                color: $primary-text-inverse;
+            }
+        }
+        &.info{
+            .nav-link.active{
+                background-color: $info-color;
+                color: $primary-text-inverse;
+            }
+        }
+        &.success{
+            .nav-link.active{
+                background-color: $success-color;
+                color: $primary-text-inverse;
+            }
+        }
+    }
+    .rg-underline-tabs{
+        .nav-link{
+            border-bottom:$border-style 3px $secondary-background-color;
+        }
+        .nav-link:hover{
+            border-color:$secondary-background-color;
+            border-bottom:$border-style 3px $light-color;
+        }
+        &.primary{
+            border-bottom: none;
+            .nav-link.active{
+                color: $primary-color;
+                border-color: $secondary-background-color;
+                border-bottom:$border-style 3px $primary-color;
+            }
+        }
+        &.secondary{
+            border-bottom: none;
+            .nav-link.active{
+                color: $secondary-text-color;
+                border-color: $secondary-background-color;
+                border-bottom: $border-style 3px $secondary-color
+            }
+        }
+        &.light{
+            border-bottom: none;
+            .nav-link.active{
+                color: $light-color;
+                border-color: $secondary-background-color;
+                border-bottom: $border-style 3px $light-color
+            }
+        }
+        &.dark{
+            border-bottom: none;
+            .nav-link.active{
+                color: $dark-color;
+                border-color: $secondary-background-color;
+                border-bottom: $border-style 3px $dark-color
+            }
+        }
+        &.error{
+            border-bottom: none;
+            .nav-link.active{
+                color: $error-color;
+                border-color: $secondary-background-color;
+                border-bottom: $border-style 3px $error-color
+            }
+        }
+        &.warning{
+            border-bottom: none;
+            .nav-link.active{
+                color: $warning-color;
+                border-color: $secondary-background-color;
+                border-bottom: $border-style 3px $warning-color
+            }
+        }
+        &.info{
+            border-bottom: none;
+            .nav-link.active{
+                color: $info-color;
+                border-color: $secondary-background-color;
+                border-bottom: $border-style 3px $info-color
+            }
+        }
+        &.success{
+            border-bottom: none;
+            .nav-link.active{
+                color: $success-color;
+                border-color: $secondary-background-color;
+                border-bottom: $border-style 3px $success-color
+            }
+        }
+    }
+    .rg-box-pills{
+        .nav-link{
+            border-radius: 0;
+            background-color: $primary-background-color;
+            &:hover{
+            background-color: darken($primary-background-color, 6%) ;
+
+            }
+        }
+        &.primary{
+            .nav-link.active{
+                background-color: $primary-color;
+                color: $primary-text-inverse;
+            }
+        }
+        &.secondary{
+            .nav-link.active{
+                background-color: $secondary-color;
+                color: $primary-text-inverse;
+            }
+        }
+        &.light{
+            .nav-link.active{
+                background-color: $light-color;
+                color: $primary-text-inverse;
+            }
+        }
+        &.dark{
+            .nav-link.active{
+                background-color: $dark-color;
+                color: $primary-text-inverse;
+            }
+        }
+        &.error{
+            .nav-link.active{
+                background-color: $error-color;
+                color: $primary-text-inverse;
+            }
+        }
+        &.warning{
+            .nav-link.active{
+                background-color: $warning-color;
+                color: $primary-text-inverse;
+            }
+        }
+        &.info{
+            .nav-link.active{
+                background-color: $info-color;
+                color: $primary-text-inverse;
+            }
+        }
+        &.success{
+            .nav-link.active{
+                background-color: $success-color;
+                color: $primary-text-inverse;
+            }
+        }
+    }
+    .rg-tabs-card{
+        .nav-link{
+            background-color: lighten($primary-background-color, 3%);
+            @include transition(0, all, 0.5s, ease);
+            &:hover{
+                background-color: lighten($primary-background-color, 6%);
+            }
+        }
+        .nav-link.active{
+            background-color: $secondary-background-color;
+        }
+        &.primary{
+            .nav-link.active{
+                color: $primary-color;
+            }
+        }
+        &.secondary{
+            .nav-link.active{
+                color: $secondary-text-color;
+            }
+        }
+        &.light{
+            .nav-link.active{
+                color: $light-color;
+            }
+        }
+        &.dark{
+            .nav-link.active{
+                color: $dark-color;
+            }
+        }
+        &.error{
+            .nav-link.active{
+                color: $error-color;
+            }
+        }
+        &.warning{
+            .nav-link.active{
+                color: $warning-color;
+            }
+        }
+        &.info{
+            .nav-link.active{
+                color: $info-color;
+            }
+        }
+        &.success{
+            .nav-link.active{
+                color: $success-color;
+            }
+        }
+    }
+    .tab-content{
+        background-color: $secondary-background-color;
+        padding: 1.8rem;
+    }
+}

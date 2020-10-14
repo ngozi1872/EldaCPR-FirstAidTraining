@@ -1,0 +1,45 @@
+﻿@page
+@model EldaCPRFirstAidTraining.Pages.Training.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    //Layout = "~/Pages/Shared/_EldaCPRLayout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Training</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Training.Title" class="control-label"></label>
+                <input asp-for="Training.Title" class="form-control" />
+                <span asp-validation-for="Training.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Training.Description" class="control-label"></label>
+                <input asp-for="Training.Description" class="form-control" />
+                <span asp-validation-for="Training.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Training.Cost" class="control-label"></label>
+                <input asp-for="Training.Cost" class="form-control" />
+                <span asp-validation-for="Training.Cost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

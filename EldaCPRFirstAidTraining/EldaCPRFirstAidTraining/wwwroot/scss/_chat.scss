@@ -1,0 +1,116 @@
+.rg-chat-box{
+    header{
+
+        .chat-header{
+            display: flex;
+            width: 100%;
+            border-bottom: $border-style 1px $border-color;
+            .inline-actions{
+                display: flex;
+                align-items: center;
+                span{
+                    padding: 0.3rem;
+                }
+              }
+              .heading{
+                display: flex;
+                .user-pic{
+                    margin-right: 1rem;
+                  }
+                  .user-details{
+                    h6{
+                        margin-bottom: 0;
+                      }
+                      p{
+                        color:$secondary-text-color;
+                      }
+                  } 
+                  
+                  
+              }
+        }
+
+
+        .rg-user-list{
+         .rg-user-list-item{
+            border-bottom: $border-style $border-size $border-color;
+
+            .user-details{
+                width: calc(100% - 120px);
+                min-width: calc(100% - 120px);
+            }
+         }   
+        }
+        .user-action{
+            color:$secondary-text-color;
+        }
+    }
+    section{
+        height: calc(100% - 77px);
+        .conversation-container{
+            height: calc(100% - 84px);
+            max-height: 800px;
+            padding:20px 0px;
+            
+            .conversation{
+                display: flex;
+                margin-bottom: 1rem;
+                &.send-to{
+                    justify-content: flex-end;
+                    .message{
+                        margin-right: 0.5rem;
+                        background-color: $info-color;
+                        border: $border-size $border-style $info-color;
+                        color:$primary-text-inverse;
+                      }
+                  }
+                .message{
+                    margin-left: 0.5rem;
+                    background-color: $light-color;
+                    border: $border-size $border-style $primary-text-inverse;
+                    border-radius: 20px;
+                    width: 70%;
+                    padding: 0.2rem 1rem;
+                    color:$primary-text-color;
+                    p{
+                        margin: 0px;
+                      }  
+                  }
+            }
+        }
+        .send-text{
+            input{
+               height: 54px;
+               border-right: none;
+             }
+           .input-group-append {
+               border: $border-size $border-style $border-color;
+               border-left: none;
+               padding:5px;
+               border-top-right-radius: $border-radius;
+               border-bottom-right-radius: $border-radius;
+               span{
+                   padding:6px;
+                   color:$secondary-text-color;
+                   cursor: pointer;
+                   &:hover{
+                    @include transition(0, all, 0.5s, ease);
+                    color: darken($secondary-text-color, 20%);
+                   }
+               }
+               span.send-btn{
+                   border-radius: 50%;
+                   color: $primary-text-inverse;
+                   background-color: $secondary-color;
+                   font-size: 1.3rem;
+                   padding: 10px 10px 10px 12px;
+                   cursor: pointer;
+                   &:hover{
+                    @include transition(0, all, 0.5s, ease);
+                    background-color: darken($secondary-color, 20%);
+                   }
+                 }                
+             }
+       }
+    }
+}

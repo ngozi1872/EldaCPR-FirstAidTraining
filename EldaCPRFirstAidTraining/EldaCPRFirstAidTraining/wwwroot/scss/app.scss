@@ -1,0 +1,70 @@
+//  Variables scss file to create different color skins
+@import 'variables';
+// @import '_variables-dark-theme';
+
+// Mixins & function & utilities
+@import 'mixins';
+@import 'utilities';
+
+// Animations
+@import 'animations';
+
+// Layout less files for different layouts, 
+// either use layout-side-navigation or layout-top-navigation
+@import 'layout-side-navigation';
+//@import 'layout-top-navigation';
+@import 'layout-public';
+
+//Media Images, Icons and typography
+@import 'typography';
+@import 'icons';
+@import 'media';
+
+//App pages less files
+@import 'ecommerce';
+@import 'email';
+@import 'chat';
+@import 'calendar';
+@import 'kanban';
+@import 'users';
+
+//Components less files
+@import 'breadcrumb';
+@import 'cards';
+@import 'form-elements';
+@import 'form-layout';
+@import 'form-validation';
+@import 'light-navigation';
+@import 'lists';
+@import 'pagination';
+@import 'table';
+
+//UI elements less files
+@import 'accordion';
+@import 'alert';
+@import 'badge';
+@import 'buttons';
+@import 'spinner';
+@import 'progress-bar';
+@import 'tabs';
+@import 'toasts';
+@import 'tool-tip';
+@import 'modal';
+
+//Pages less files
+@import 'error';
+@import 'profile';
+
+// Library or plugins overwrite less files
+@import 'bootstrap-overwrites';
+@import 'data-tables-overwrite';
+@import 'jslider';
+
+
+//To override CSS for RTL behavior and should be added at the last
+//@import 'rtl';
+//@import 'rtl-left-navigation.scss';
+//@import 'rtl-top-navigation.scss';
+
+//Full Page Loader
+@import 'page-loader';

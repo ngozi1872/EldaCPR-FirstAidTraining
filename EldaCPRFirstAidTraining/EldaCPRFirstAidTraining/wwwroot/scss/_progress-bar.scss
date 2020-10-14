@@ -1,0 +1,92 @@
+.progress{
+    &.small{
+        height:2px;
+    }
+    &.medium{
+        height:5px;
+    }
+    &.large{
+        height:10px;
+    }
+    &.extra-large{
+        height:20px;
+    }
+    .progress-bar{
+        &.primary{
+            background: $primary-color;
+        }
+        &.secondary{
+            background: $secondary-color;
+        }
+        &.light{
+            background: $light-color;
+        }
+        &.dark{
+            background: $dark-color;
+        }
+        &.error{
+            background: $error-color;
+        }
+        &.warning{
+            background: $warning-color;
+        }
+        &.info{
+            background: $info-color;
+        }
+        &.success{
+            background: $success-color;
+        }
+        &.progress-bar-striped{
+            background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+            background-size: 1rem 1rem;
+        }
+    }
+}
+
+.rg-progress {
+    background: $light-color;
+    &.small{
+        height:2px;
+    }
+    &.medium{
+        height:5px;
+    }
+    &.large{
+        height:10px;
+    }
+    &.extra-large{
+        height:20px;
+    }
+    .rg-progress-bar {
+        display: flex;
+        justify-content: space-between;
+        
+        .caption {
+            @include font-size(12px);
+        }
+        &.primary {
+            background: $primary-color;
+        }
+        &.secondary {
+            background: $secondary-color;
+        }
+        &.light {
+            background: $light-color;
+        }
+        &.dark {
+            background: $dark-color;
+        }
+        &.error {
+            background: $error-color;
+        }
+        &.warning {
+            background: $warning-color;
+        }
+        &.info {
+            background: $info-color;
+        }
+        &.success {
+            background: $success-color;
+        }
+    }
+}
