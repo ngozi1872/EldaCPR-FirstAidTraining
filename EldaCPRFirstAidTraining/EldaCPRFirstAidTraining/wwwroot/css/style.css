@@ -2928,14 +2928,14 @@ textarea:focus {
 }
 
 .home-slider .slider-wrapper .slider1 {
-  background-image: url("../images/slider-1.jpg");
+  background-image: url("../images/Landing2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .home-slider .slider-wrapper .slider2 {
-  background-image: url("../images/slider-2.jpg");
+  background-image: url("../images/Landing4.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -4342,7 +4342,7 @@ textarea:focus {
 ##. Home About Area
 ==================== */
 .h-about {
-  background-image: url("../images/about-bg.jpg");
+  background-image: url("../images/CPR3.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5612,7 +5612,7 @@ textarea:focus {
 ##. Testimonial Area
 ==================== */
 .testimonial {
-  background-image: url("../images/testimonial-bg.jpg");
+/*  background-image: url("../images/testimonial-bg.jpg");*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
