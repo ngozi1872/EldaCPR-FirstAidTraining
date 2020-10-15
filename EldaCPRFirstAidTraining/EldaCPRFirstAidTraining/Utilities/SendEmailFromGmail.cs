@@ -12,7 +12,7 @@ namespace EldaCPRFirstAidTraining.Utilities
     {
         public void SendEmail(string toEmail, string toName, string subject, string body, string path = null)
         {
-            var fromAddress = new MailAddress("stringbuild1@gmail.com", "Nourishing Hands");
+            var fromAddress = new MailAddress("stringbuild1@gmail.com", "Elda CPR and First Aid Training");
             var toAddress = new MailAddress(toEmail, toName);
             var copy = new MailAddress("stringbuild1@gmail.com");
             const string fromPassword = "Trinity@2016";

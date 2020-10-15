@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using EldaCPRFirstAidTraining.Data;
 using EldaCPRFirstAidTraining.Utilities;
@@ -23,7 +24,7 @@ namespace EldaCPRFirstAidTraining.Pages
         public DateTime UpComingTraining { get; set; }
 
         [BindProperty]
-        public Student Student { get; set; }
+        public Data.Student Student { get; set; }
 
         [TempData]
         public string Message { get; set; }
@@ -62,24 +63,36 @@ namespace EldaCPRFirstAidTraining.Pages
 
         public IActionResult OnPostAddTraining()
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return Page();
+                if (!ModelState.IsValid)
+                {
+                    return Page();
+                }
+
+                Student.CreatedOn = DateTime.Now;
+
+                _context.Students.Add(Student);
+                _context.SaveChanges();
+
+                var schedule = _context.TrainingSchedules.FirstOrDefault(ts => ts.Id == Student.ScheduleId);
+                var training = _context.Trainings.FirstOrDefault(t => t.Id == schedule.TrainingId);
+
+                var logoPath = Path.Combine(_hostingEnvironment.WebRootPath, $"assets/images/b-heart.png");
+
+                SendEmailFromGmail sfgmail = new SendEmailFromGmail();
+                sfgmail.SendEmail(Student.Email, Student.FristName + " " + Student.LastName, "Elda CPR and First Aid Training Confirmation",
+                        string.Format("Dear " + Student.FristName + ", <br/> Thanks for registering to for the follwoing training: " + training.Title + " - " + training.Description + "; scheduled for " + schedule.StartDate + ". <br/>Please bring $" + training.Cost + " cash on the day of training. <br/><br/> We will follow up with you soon, <br/> Elda CPR and First Aid Training.<br/><br/>"), null);
+
+                Message = $"Thanks for registering for {training.Title + " - " + training.Description} scheduled on {schedule.StartDate}.";
+                return RedirectToPage("./Index");
+
             }
-
-            Student.CreatedOn = DateTime.Now;
-
-            _context.Students.Add(Student);
-            _context.SaveChanges();
-
-
-            var logoPath = Path.Combine(_hostingEnvironment.WebRootPath, $"assets/images/NH-Logo.png");
-
-            //SendEmailFromGmail sfgmail = new SendEmailFromGmail();
-            //sfgmail.SendEmail(Student.Email, Student.FristName + " " + Student.LastName, "Elda CPR and First Aid Training Confirmation",
-            //        string.Format("Dear " + Student.FristName + ", <br/> Thanks for registering to for our " + myEvent.Name + " on " + date + " from " + myEvent.StartTime + " to " + myEvent.EndTime + ". <br/> We will follow up with you soon. <br/><br/> Nourishing Hands, Inc.<br/><br/>"), logoPath);
-
-            return RedirectToPage("./Index");
+            catch(Exception ex)
+            {
+                Message = $"Error: {ex.Message}";
+                return RedirectToPage("./Index");
+            }
         }
 
         private IList<Schedule> GetSchedule()

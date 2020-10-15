@@ -249,6 +249,7 @@
     <section class="welcome-area">
         <div class="container">
             <div class="row">
+
                 @*<div class="col-md-6">
                         <div class="rg-card-simple equal-height">
                             <header>
@@ -289,6 +290,7 @@
                         </div>
                     </div>*@
                 <div class="col-md-12">
+                    <partial name="_StatusMessage" model="Model.Message" />
                     <div class="rg-card-simple">
                         <header></header>
                         <section>
@@ -475,9 +477,11 @@
                     <div class="pricing-top text-center">
                         <h4>Additional Information</h4>
                         <img src="images/heartbeat.png" alt="">
-                        <p style="color:red">
-                            <b>PLEASE register online, but do NOT pay online via credit card . . . please bring cash or a check with you to the training event as payment. Thank You!!</b>
-                        </p>
+
+                        <div class="alert alert-danger alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>PLEASE</strong> register online, but do <strong>NOT</strong> pay online via credit card. Please bring cash or a check with you to the training event as payment. Thank You!!
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6">
