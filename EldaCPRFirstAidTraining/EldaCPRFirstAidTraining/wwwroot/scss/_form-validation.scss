@@ -1,0 +1,50 @@
+form{
+    &.was-validated{
+        .form-control:valid{
+            border-color: $success-color;
+        }
+        .form-control:invalid{
+            border-color: $error-color;
+        }
+        .custom-select:valid{
+            border-color: $success-color;
+        }
+        .custom-select:invalid{
+            border-color: $error-color;
+        }
+        .custom-control-input:valid~.custom-control-label::before{
+            border-color: $success-color;
+        }
+        .custom-control-input:invalid~.custom-control-label::before{
+            border-color: $error-color;
+        }
+        .custom-control-input:valid:checked~.custom-control-label::before{
+            border-color: $success-color;
+            background-color: $success-color
+        }
+        .custom-control-input:invalid:checked~.custom-control-label::before{
+            border-color: $error-color;
+            background-color: $error-color
+        }
+        .custom-control-input:valid~.custom-control-label{
+            color: $success-color;
+        }
+        .custom-control-input:invalid~.custom-control-label{
+            color: $error-color;
+        }
+    }
+    .form-control{
+        &.is-valid{
+            border-color: $success-color;
+        }
+        &.is-invalid{
+            border-color: $error-color;
+        }
+    }
+    .valid-feedback{
+        color: $success-color;
+    }
+    .invalid-feedback{
+        color: $error-color;
+    }
+}

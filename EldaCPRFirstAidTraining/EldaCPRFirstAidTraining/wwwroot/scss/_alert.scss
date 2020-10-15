@@ -1,0 +1,152 @@
+.rg-alert {
+    display: block;
+    align-items: center;
+    border-radius: $border-radius;
+    padding: 0.5rem 0.8rem;
+    font-weight: 400;
+    & > .material-icons{
+        display: inline-block;
+        margin-right: 1rem;
+    }
+    & > span{
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &.alert-primary {
+        color: $primary-color;
+        background: lighten($primary-color, 30%)
+    }
+    &.alert-secondary {
+        color: $secondary-text-color;
+        background: lighten($secondary-color, 30%)
+    }
+    &.alert-light {
+        color: $light-color;
+        background: lighten($light-color, 10%);
+    }
+    &.alert-dark {
+        color: $dark-color;
+        background: lighten($dark-color, 32%)
+    }
+    &.alert-warning {
+        color: $warning-color;
+        background: lighten($warning-color, 30%)
+    }
+    &.alert-error {
+        color: $error-color;
+        background: lighten($error-color, 30%)
+    }
+    &.alert-success {
+        color: $success-color;
+        background: lighten($success-color, 32%)
+    }
+    &.alert-info {
+        color: $info-color;
+        background: lighten($info-color, 38%)
+    }
+
+    &.alert-solid-primary {
+        color: $primary-text-inverse;
+        background: $primary-color;
+    }
+    &.alert-solid-secondary {
+        color: $primary-text-inverse;
+        background: $secondary-color;
+    }
+    &.alert-solid-light {
+        color: $primary-text-color;
+        background: $light-color;
+    }
+    &.alert-solid-dark {
+        color: $primary-text-inverse;
+        background: $dark-color;
+    }
+    &.alert-solid-warning {
+        color: $primary-text-inverse;
+        background: $warning-color;
+    }
+    &.alert-solid-error {
+        color: $primary-text-inverse;
+        background: $error-color;
+    }
+    &.alert-solid-success {
+        color: $primary-text-inverse;
+        background: $success-color;
+    }
+    &.alert-solid-info {
+        color: $primary-text-inverse;
+        background: $info-color;
+    }
+
+    &.alert-primary-transparent {
+        color: $primary-color;
+        border-color: $primary-color;
+    }
+    &.alert-secondary-transparent {
+        color: $secondary-text-color;
+        border-color: $secondary-color;
+    }
+    &.alert-light-transparent {
+        color: $light-color;
+        border-color: $light-color;
+    }
+    &.alert-dark-transparent {
+        color: $dark-color;
+        border-color: $dark-color;
+    }
+    &.alert-warning-transparent {
+        color: $warning-color;
+        border-color: $warning-color;
+    }
+    &.alert-error-transparent {
+        color: $error-color;
+        border-color: $error-color;
+    }
+    &.alert-success-transparent {
+        color: $success-color;
+        border-color: $success-color;
+    }
+    &.alert-info-transparent {
+        color: $info-color;
+        border-color: $info-color;
+    }
+    
+    &.alert-small {
+        padding: 0.1rem 0.8rem;
+    }
+    &.alert-large {
+        padding: 1.3rem 0.8rem;
+    }
+
+    &.alert-white {
+        background: $secondary-background-color;
+        box-shadow: 0 0 10px 5px $box-shadow-color;
+    }
+    &.alert-black {
+        background-color: $dark-color;
+    }
+
+    &.alert-card {
+        padding: 1rem;
+        header {
+            display: flex;
+            margin-bottom: 1rem;
+            .alert-heading{
+                padding-left: 1rem;
+                width: calc(100% - 50px);
+            }
+        }
+        section {
+            p{
+                margin-bottom: 0;
+            }
+        }
+        footer{
+            margin-top: 1rem;
+            .btn{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

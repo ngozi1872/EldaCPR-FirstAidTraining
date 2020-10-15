@@ -1,0 +1,22 @@
+.fc{
+    .fc-toolbar{
+        .fc-button-primary{
+            background-color: $primary-color;
+            border-color: $primary-color;
+            &:not(:disabled).fc-button-active{
+                background-color: darken($primary-color, 10%);
+                border-color: darken($primary-color, 10%);
+            }
+        }
+    }
+}
+
+/*******************************************************/
+/* MEDIAQUERIES */
+/*******************************************************/
+
+@media(max-width: 666px){
+    .fc-toolbar.fc-header-toolbar{
+        display: block;
+    }
+}

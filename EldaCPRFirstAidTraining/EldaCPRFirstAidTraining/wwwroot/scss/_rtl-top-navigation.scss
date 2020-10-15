@@ -1,0 +1,17 @@
+// Dropdwon RTL
+main > header {
+    .main-navigation {
+        nav.navbar {
+            .navbar-nav {
+                .dropdown-menu {
+                    .dropdown-submenu {
+                        .dropdown-menu {
+                            left: auto;
+                            right: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+
+main.public-main{
+    background-color: $secondary-background-color;
+    display: flex;
+    aside.public-aside{
+        background: rgb(49, 26, 65);
+        background: linear-gradient(0deg, $aside-gradient-from-color 0%, $aside-gradient-to-color 100%);
+        background: url(../images/public_layout_bg.jpg) center center no-repeat;
+        width: 50%;
+        padding: 15px 0;
+        color: $primary-text-inverse;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        section{
+            h1{
+                color: darken($primary-text-inverse, 35%);
+            }
+            p{
+                font-size: 1.5rem;
+                color: darken($primary-text-inverse, 35%);
+            }
+        }
+        footer{
+            .footer-nav-copyright{
+                color: darken($primary-text-inverse, 35%);
+            }
+            .footer-nav{
+                display: flex;
+                .footer-nav-link {
+                    display: flex;
+                    a{
+                        padding:0 15px;
+                        color: $primary-text-inverse
+                    }
+                }
+            }
+            &:after{
+                @include clearfix;
+            }
+        }
+    }
+    section.public-section{
+        background: $secondary-background-color;
+        height: auto;
+        padding: 0;
+        padding-left: 50%;
+        h1{
+            font-size:2rem;
+            color: darken($primary-text-inverse, 35%);
+            margin-bottom: 2rem;
+        }
+        .social-media-buttons{
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 1024px) {
+main.public-main{
+        display: block;
+        aside.public-aside{
+            position: relative;
+            width: 100%;
+            display: block;
+            padding: 50px 15px 150px;
+        }
+        section.public-section{
+            width: auto;
+            position: relative;
+            z-index: 1;
+            margin-top: -100px;
+            flex-flow: none;
+            display: block;
+            margin-left: 15px;
+            margin-right: 15px;
+            padding: 15px 0;
+            border-radius: $border-radius;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main.public-main{
+        aside.public-aside{
+            footer{
+                .footer-nav{
+                    display: block;
+                    text-align: left;
+                    .footer-nav-link {
+                        text-align: left;
+                        display: block;
+                        width: 100%;
+                        li{
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+        section.public-section{
+            .social-media-buttons{
+                .btn + .btn{
+                    margin-left: 0.2rem;
+                }
+            }
+        }
+    }
+}

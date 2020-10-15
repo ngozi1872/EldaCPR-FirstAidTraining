@@ -1,0 +1,143 @@
+/*****************************************/
+/* Dropdown overwrite /*
+/*****************************************/
+.dropdown-menu{
+    @include rg-card;
+    padding: 0;
+    margin: 0;
+    -webkit-animation: anim-move-up .3s ease-out 1, anim-fade-in .3s ease-out 1;
+    animation: anim-move-up .3s ease-out 1, anim-fade-in .3s ease-out 1;
+    header  {
+        margin-bottom: 1rem;
+    }
+    section {
+        padding: 0;
+        .dropdown-item{
+            display: flex;
+            padding: 0.5rem 1rem;
+            @include transition(0.1s, all,0.5s, ease-in-out);
+            &:hover, &:active{
+                background: lighten($primary-background-color, 6%);;
+                color: $primary-text-color;
+            }
+            i.material-icons{
+                margin-right: 1rem;
+            }
+            span{
+                font-size: 0.88rem;
+            }
+        }
+    }
+    .dropdown-divider{
+        margin: 0;
+    }
+    &.dropdown-menu-action{
+        header{
+            @include clearfix;
+            h1{
+                float: left;
+            }
+            span{
+                float: right;
+            }
+        }
+    }
+    &.dropdown-menu-highlight-header{
+        header{
+            position:relative;
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
+            h5{
+                color: $secondary-background-color;
+                margin-bottom: 1rem;
+            }
+            span.material-icons{
+                color: $secondary-background-color;
+            }
+        }
+        &.heightlight-primary{
+            header{
+                background: $primary-color;
+            }
+        }
+        &.heightlight-secondary{
+            header{
+                background: $secondary-color;
+            }
+        }
+        &.heightlight-light{
+            header{
+                background: $light-color;
+            }
+        }
+        &.heightlight-dark{
+            header{
+                background: $dark-color;
+            }
+        }
+        &.heightlight-error{
+            header{
+                background: $error-color;
+            }
+        }
+        &.heightlight-warning{
+            header{
+                background: $warning-color;
+            }
+        }
+        &.heightlight-info{
+            header{
+                background: $info-color;
+            }
+        }
+        &.heightlight-success{
+            header{
+                background: $success-color;
+            }
+        }
+    }
+    &.dropdown-sarch{
+        min-width: 15rem;
+        .form-group{
+            margin:0;
+            display: flex;
+            align-items: center;
+            .form-control{
+                border: none;
+                padding: 1rem;
+                height: auto;
+                max-width: calc(100% - 2rem);
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+            span{
+                display: inline-block;
+                width: 2rem;
+            }
+        }
+    }
+    &.notification-dropdown{
+        min-width: 24em;
+        &.dropdown-menu-highlight-header{
+            header{
+                span.material-icons{
+                    @include font-size(24px);;
+                    color: $primary-text-inverse;
+                }
+            }
+        }
+    }
+    &.message-dropdown{
+        min-width: 24rem;
+    }
+}
+
+/*****************************************/
+/* Bread crum overwrite /*
+/*****************************************/
+
+.breadcrumb{
+    background-color: transparent;
+}

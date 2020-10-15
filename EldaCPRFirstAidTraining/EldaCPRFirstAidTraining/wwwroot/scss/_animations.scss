@@ -1,0 +1,71 @@
+@-webkit-keyframes anim-fade-in {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes anim-fade-in {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes anim-move-down {
+	from {
+		margin-top: -10px
+	}
+	to {
+		margin-top: 0
+	}
+}
+
+@keyframes anim-move-down {
+	from {
+		margin-top: -10px
+	}
+	to {
+		margin-top: 0
+	}
+}
+
+@-webkit-keyframes anim-move-up {
+	from {
+		margin-top: 10px
+	}
+	to {
+		margin-top: 0
+	}
+}
+
+@keyframes anim-move-up {
+	from {
+		margin-top: 10px
+	}
+	to {
+		margin-top: 0
+	}
+}
+
+@-webkit-keyframes topNav-drop-down-move-up{
+	from {
+		margin-top: 20px
+	}
+	to {
+		margin-top: 10px
+	}
+}
+
+@keyframes topNav-drop-down-move-up{
+	from {
+		margin-top: 20px
+	}
+	to {
+		margin-top: 10px
+	}
+}

@@ -1,0 +1,11 @@
+.modal{
+    &.rg-modal{
+        .modal-dialog{
+           
+            .modal-content{
+                @include rg-card;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

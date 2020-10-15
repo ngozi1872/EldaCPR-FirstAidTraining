@@ -1,0 +1,59 @@
+.toast{
+    position: fixed;
+    z-index: 99999;
+    color: $primary-text-inverse;
+    .toast-header{
+        background: transparent;
+        color: $primary-text-inverse;
+    }
+    &.primary{
+        background: $primary-color;
+    }
+    &.secondary{
+        background: $secondary-color;
+    }
+    &.light{
+        background: $light-color;
+    }
+    &.dark{
+        background: $dark-color;
+    }
+    &.error{
+        background: $error-color;
+    }
+    &.warning{
+        background: $warning-color;
+    }
+    &.info{
+        background: $info-color;
+    }
+    &.success{
+        background: $success-color;
+    }
+    &.top-right{
+        top: 10px;
+        right: 10px;
+    }
+    &.top-left{
+        top: 10px;
+        left: 10px;
+    }
+    &.bottom-right{
+        bottom: 10px;
+        right: 10px;
+    }
+    &.bottom-left{
+        bottom: 10px;
+        left: 10px;
+    }
+    &.top-middle{
+        top:10px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    &.full-width{
+        width: calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
+}
