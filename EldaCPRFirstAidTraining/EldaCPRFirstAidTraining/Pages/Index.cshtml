@@ -1,398 +1,669 @@
 ﻿@page
 @model IndexModel
 @{
-    Layout = "_EldaCPRLayout";
+    Layout = null;
 }
 
-<!-- Slider Area -->
-<section class="home-slider">
-    <div class="slider-wrapper owl-carousel">
-        <div class="slider-item slider1">
-            <div class="slider-table">
-                <div class="slider-tablecell">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8 col-md-12">
-                                <div class="slider-heading wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="0.2s">
-                                    <h1><span>MediSeba</span> Provides Complete Healthcare.</h1>
-                                </div>
-                                <div class="slider-para wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                                <div class="slider-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slider-item slider2">
-            <div class="slider-table">
-                <div class="slider-tablecell">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8 offset-lg-4 col-md-12 text-right">
-                                <div class="slider-heading wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="0.2s">
-                                    <h1><span>MediSeba</span> Care About Your Health.</h1>
-                                </div>
-                                <div class="slider-para wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                                <div class="slider-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                                    <a href="">Find A Doctor</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Elda CPR & First Aid Training</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/assets/bootstrap.min.css">
+
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="css/assets/font-awesome.min.css">
+
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="css/assets/animate.css">
+
+    <!-- Owl Slider -->
+    <link rel="stylesheet" href="css/assets/owl.carousel.min.css">
+
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="css/assets/tempusdominus-bootstrap-4.min.css">
+
+    <!-- Magnific PopUp -->
+    <link rel="stylesheet" href="css/assets/magnific-popup.css">
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/assets/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/assets/responsive.css">
+
+    <!-- keep either rlt or ltr bootstrap css... DON"T Include both even with comment -->
+    <link href="~/vendors/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/vendors/css/perfect-scrollbar.css" rel="stylesheet" />
+    <link href="~/vendors/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <link href="~/vendors/css/responsive.dataTables.min.css" rel="stylesheet" />
+    <link href="~/vendors/js/fullcalendar/core/main.css" rel='stylesheet' />
+    <link href="~/vendors/js/fullcalendar/daygrid/main.css" rel='stylesheet' />
+    <link href="~/vendors/js/fullcalendar/timegrid/main.css" rel='stylesheet' />
+
+    <link href="~/vendors/js/fullcalendar/list/main.css" rel='stylesheet' />
+    <link href="~/vendors/css/jquery.slider.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pr-circle">
+            <div class="pr-circle1 pr-child"></div>
+            <div class="pr-circle2 pr-child"></div>
+            <div class="pr-circle3 pr-child"></div>
+            <div class="pr-circle4 pr-child"></div>
+            <div class="pr-circle5 pr-child"></div>
+            <div class="pr-circle6 pr-child"></div>
+            <div class="pr-circle7 pr-child"></div>
+            <div class="pr-circle8 pr-child"></div>
+            <div class="pr-circle9 pr-child"></div>
+            <div class="pr-circle10 pr-child"></div>
+            <div class="pr-circle11 pr-child"></div>
+            <div class="pr-circle12 pr-child"></div>
         </div>
     </div>
-</section>
-<!-- End Slider Area -->
-<!-- Service Area -->
-<section class="welcome-area">
-    <div class="container">
-        <p style="color:red; text-align: center; font-size:20px">
-            <b>PLEASE register online, but do NOT pay online via credit card . . . please bring cash or a check with you to the training event as payment. Thank You!!</b>
-        </p>
-        <div class="row">
-            @*<div class="col-md-6">
-                <div class="rg-card-simple equal-height">
-                    <header>
-                        <h5>Simple Table</h5>
-                    </header>
-                    <section>
-                        <table class="table rg-table rg-table-simple">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>twitter</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </section>
+    <!-- End Preloader -->
+    <!-- Top Bar -->
+    <section class="top-bar" id="btt">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-9">
+                    <div class="bar-content">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item"><img src="images/phone.png" alt="">+1 (267) 242-4795</li>
+                            <li class="list-inline-item"><img src="images/clock.png" alt="">Mon - Sat 8:30am - 6:30pm</li>
+                            <li class="list-inline-item"><img src="images/mail.png" alt="">eleekpalay@aol.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-3">
+                    <div class="top-social text-right">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-linkedin"></i></a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-google-plus"></i></a></li>
+                            <li class="list-inline-item">
+                                <span><button type="button" data-toggle="modal" data-target="#model-box">Make an Appointment</button></span>
+                                <!-- Appointment Box -->
+                                <div class="modal fade" id="model-box">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content text-center">
+                                            <div class="medel-box-top">
+                                                <h4 id="courseTitle">Register</h4>
+                                                <img src="images/heartbeat.png" alt="">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <i class="fa fa-times"></i>
+                                                </button>
+                                            </div>
+                                            <div id="descriptTxt"></div>
+                                            <br />
+                                            <div class="alert alert-danger alert-dismissible fade show">
+                                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                                <strong>PLEASE</strong> register online, but do <strong>NOT</strong> pay online via credit card. Please bring cash or a check with you to the training event as payment. Thank You!!
+                                            </div>
+                                            <form method="post" asp-page="Index" asp-page-handler="AddTraining">
+                                                <p>
+                                                    <select asp-for="Student.ScheduleId" class="form-control" id="schdls" asp-items="ViewBag.TrainingId">
+                                                        <option value=""> Please select </option>
+                                                    </select>
+                                                </p>
+                                                <input asp-for="Student.FristName" placeholder="Frist Name" required>
+                                                <input asp-for="Student.LastName" placeholder="Last Name" required>
+                                                <input asp-for="Student.Email" placeholder="Email" required>
+                                                <input asp-for="Student.Phone" placeholder="Phone" required>
+                                                <button type="submit">Register</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Top Bar -->
+    <!-- Logo Area -->
+    <section class="logo-area menu-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <a href=""><img src="images/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="main-menu text-left">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item active">
+                                <a>HOME</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a>SERVICE</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a>ABOUT US</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a>APPOINTMENT</a>
+                            </li>
+                            <li class="list-inline-item mega-menu">
+                                <a>CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Logo Area -->
+    <!-- Mobile Menu -->
+    <section class="mobile-menu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mobile-menu">
+                        <nav id="dropdown">
+                            <a href=""><img src="images/logo.png" alt=""></a>
+                            <a href=""><i class="fa fa-bell-o"></i></a>
+                            <ul class="list-unstyled">
+                                <li><a href="">HOME</a></li>
+                                <li><a href="">SERVICE</a></li>
+                                <li><a href="">ABOUT US</a></li>
+                                <li><a href="">SCHEDULE</a></li>
+                                <li><a href="">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Mobile Menu -->
+    <!-- Slider Area -->
+    <section class="home-slider">
+        <div class="slider-wrapper owl-carousel">
+            <div class="slider-item slider1">
+                <div class="slider-table">
+                    <div class="slider-tablecell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-12">
+                                    <div class="slider-heading wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="0.2s">
+                                        <h1><span>MediSeba</span> Provides Complete Healthcare.</h1>
+                                    </div>
+                                    <div class="slider-para wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="slider-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item slider2">
+                <div class="slider-table">
+                    <div class="slider-tablecell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 offset-lg-4 col-md-12 text-right">
+                                    <div class="slider-heading wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="0.2s">
+                                        <h1><span>MediSeba</span> Care About Your Health.</h1>
+                                    </div>
+                                    <div class="slider-para wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="slider-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                                        <a href="">Find A Doctor</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Slider Area -->
+    <!-- Service Area -->
+    <!-- Service Area -->
+    <section class="welcome-area">
+        <div class="container">
+            <div class="row">
+
+                @*<div class="col-md-6">
+                        <div class="rg-card-simple equal-height">
+                            <header>
+                                <h5>Simple Table</h5>
+                            </header>
+                            <section>
+                                <table class="table rg-table rg-table-simple">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+                        </div>
+                    </div>*@
+                <div class="col-md-12">
+                    <partial name="_StatusMessage" model="Model.Message" />
+                    <div class="rg-card-simple">
+                        <header></header>
+                        <section>
+                            <div id='calendar'></div>
+                        </section>
+                    </div>
+                    <input asp-for="@Model.UpComingTraining" hidden id="defaultDate" />
+                </div>
+            </div>
+        </div>
+
+        @*<div class="modal fade" id="model-box">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content text-center">
+                        <div class="medel-box-top">
+                            <h4 id="courseTitle">Register</h4>
+                            <img src="images/heartbeat.png" alt="">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="fa fa-times"></i>
+                            </button>
+                        </div>
+                        <div id="descriptTxt"></div>
+                        <br />
+                        <div class="alert alert-danger alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>PLEASE</strong> register online, but do <strong>NOT</strong> pay online via credit card. Please bring cash or a check with you to the training event as payment. Thank You!!
+                        </div>
+                        <form method="post" asp-page="Index" asp-page-handler="AddVoluntaryForEvent">
+                            <input asp-for="Student.FristName" placeholder="Frist Name" required>
+                            <input asp-for="Student.LastName" placeholder="Last Name" required>
+                            <input asp-for="Student.Email" placeholder="Email" required>
+                            <input asp-for="Student.Phone" placeholder="Last Name" required>
+                            <button type="submit">Book Now</button>
+                        </form>
+                    </div>
                 </div>
             </div>*@
-            <div class="col-md-12">
-                <div class="rg-card-simple">
-                    <header></header>
-                    <section>
-                        <div id='calendar'></div>
-                    </section>
-                </div>
-                <input asp-for="@Model.UpComingTraining" hidden id="defaultDate" />
-            </div>
-        </div>
-    </div>
 
-    <div class="modal fade" id="model-box">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content text-center">
-                <div class="medel-box-top">
-                    <h4 id="courseTitle">Register</h4>
-                    <img src="images/heartbeat.png" alt="">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <i class="fa fa-times"></i>
-                    </button>
+    </section>
+    <!-- End Service Area -->
+    <!-- About Instructor -->
+    <section class="h-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="about-box">
+                        <h3 style="color:#fff">About instructor</h3><br />
+                        <h3 style="color:#fff">Elda Foster,</h3>
+                        <h5 style="color:#fff">Master of Science: Nursing, Wilmington University </h5><br />
+                        <p>
+                            I am a certified American Heart Association BLS Instructor who has over 14 years of nursing experience working labor and delivery, postpartum,
+                            newborn nursery, medical-surgical, nurse manager, and clinical nurse supervisor at major intercity hospitals in Philadelphia, PA.
+                            I have experience in responding to emergency situations (RRT, Code Blue) and assisting as necessary.
+                        </p>
+                    </div>
                 </div>
-                <div id="descriptTxt"></div>
-                <br />
-                <form  method="post" asp-page="Index" asp-page-handler="AddVoluntaryForEvent">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="text" name="phone" placeholder="Phone Number" required>
-                    <input type="text" name="email" placeholder="Email Address" required>
-                    <input type="text" id="datetimepicker" data-toggle="datetimepicker" data-target="#datetimepicker" name="appdate" placeholder="Appointment Date">
-                    <textarea name="message" placeholder="Message" required></textarea>
-                    <button type="submit">Book Now</button>
-                </form>
+                <div class="col-md-4">
+                    <div class="about-image">
+                        <img src="images/Instructor.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- End Of About Instructor -->
+    <!-- Course Info -->
+    <section class="news">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="news-box" style="height:100%">
+                        <div class="news-image">
+                            <a href=""><img src="images/COURS3.jpg" alt="" class="img-fluid"></a>
+                        </div>
+                        <div class="news-heading d-flex">
+                            <div class="news-date text-center">
+                                <p><br> </p>
+                            </div>
+                            <div class="heading-box">
+                                <h6><a href="">BLS HCP</a></h6>
+                                <ul class="list-unstyled list-inline">
+                                    <li class="list-inline-item">For Healthcare Providers</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <p>
+                                The Basic Life Support (BLS) for Healthcare Providers Classroom Course is designed to provide a wide variety of healthcare professionals the ability
+                                to recognize several life-threatening emergencies, provide CPR, use an AED, and relieve choking in a safe, timely and effective manner.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news-box" style="height:100%">
+                        <div class="news-image">
+                            <a href=""><img src="images/COURS1.jpg" alt="" class="img-fluid"></a>
+                        </div>
+                        <div class="news-heading d-flex">
+                            <div class="news-date text-center">
+                                <p><br> </p>
+                            </div>
+                            <div class="heading-box">
+                                <h6><a href="">CPR AED</a></h6>
+                                <ul class="list-unstyled list-inline">
+                                    <li class="list-inline-item">Heartsaver CPR with AED training</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <p>
+                                Heartsaver®  First Aid CPR AED is a classroom, video-based, instructor-led course that teaches students critical skills needed to respond to and manage a
+                                first aid, choking or sudden cardiac arrest emergency in the first few minutes until emergency medical services (EMS) arrives.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news-box" style="height:100%">
+                        <div class="news-image">
+                            <a href=""><img src="images/COURS2.jpg" alt="" class="img-fluid"></a>
+                        </div>
+                        <div class="news-heading d-flex">
+                            <div class="news-date text-center">
+                                <p><br></p>
+                            </div>
+                            <div class="heading-box">
+                                <h6><a href="">FA CPR AED</a></h6>
+                                <ul class="list-unstyled list-inline">
+                                    <li class="list-inline-item">Heartsaver First Aid with AED training</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <p>
+                                Students learn skills such as how to treat bleeding, sprains, broken bones, shock and other first aid emergencies.  This course also teaches adult CPR and AED use.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Course Info -->
+    <!-- Home About Area -->
+    <section class="h-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="about-box">
+                        <h4>Why Us</h4>
+                        <img src="images/heartbeat2.png" alt="">
+                        <p>
+                            didiidiidi
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="shedule-box">
+                        <div class="open-hr">
+                            <h6><i class="fa fa-clock-o"></i>Opening Hours</h6>
+                            <ul class="list-unstyled">
+                                <li>Monday - Friday <span>8:30am - 9:00pm</span></li>
+                                <li>Saturday <span>10:30am - 2:30pm</span></li>
+                                <li>Sunday <span>10:00am - 5:00pm</span></li>
+                            </ul>
+                        </div>
+                        <div class="help-box">
+                            <h6><i class="fa fa-pencil-square-o"></i>Need Help?</h6>
+                            <p>Lorem ipsum dolor sit amet, consecte Molestiae adipisic elit.</p>
+                            <a href="">Make an Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Home About Area -->
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pricing-top text-center">
+                        <h4>Additional Information</h4>
+                        <img src="images/heartbeat.png" alt="">
 
-    @*<div id="fullCalModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
-                        <h4 id="modalTitle" class="modal-title"></h4>
-                    </div>
-                    <div id="modalBody" class="modal-body"></div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <a class="btn btn-primary" id="eventUrl" target="_blank">Event Page</a>
-                    </div>
-                </div>
-            </div>
-        </div>*@
-</section>
-<!-- End Service Area -->
-<!-- About Instructor -->
-<section class="h-about">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="about-box">
-                    <h3 style="color:#fff">About instructor</h3><br />
-                    <h3 style="color:#fff">Elda Foster,</h3>
-                    <h5 style="color:#fff">Master of Science: Nursing, Wilmington University </h5><br />
-                    <p>
-                        I am a certified American Heart Association BLS Instructor who has over 14 years of nursing experience working labor and delivery, postpartum,
-                        newborn nursery, medical-surgical, nurse manager, and clinical nurse supervisor at major intercity hospitals in Philadelphia, PA.
-                        I have experience in responding to emergency situations (RRT, Code Blue) and assisting as necessary.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="about-image">
-                    <img src="images/Instructor.jpg" alt="" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Of About Instructor -->
-<!-- Course Info -->
-<section class="news">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="news-box" style="height:100%">
-                    <div class="news-image">
-                        <a href=""><img src="images/COURS3.jpg" alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="news-heading d-flex">
-                        <div class="news-date text-center">
-                            <p><br> </p>
-                        </div>
-                        <div class="heading-box">
-                            <h6><a href="">BLS HCP</a></h6>
-                            <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item">For Healthcare Providers</li>
-                            </ul>
+                        <div class="alert alert-danger alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>PLEASE</strong> register online, but do <strong>NOT</strong> pay online via credit card. Please bring cash or a check with you to the training event as payment. Thank You!!
                         </div>
                     </div>
-                    <div class="news-content">
-                        <p>
-                            The Basic Life Support (BLS) for Healthcare Providers Classroom Course is designed to provide a wide variety of healthcare professionals the ability
-                            to recognize several life-threatening emergencies, provide CPR, use an AED, and relieve choking in a safe, timely and effective manner.
-                        </p>
-                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="news-box" style="height:100%">
-                    <div class="news-image">
-                        <a href=""><img src="images/COURS1.jpg" alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="news-heading d-flex">
-                        <div class="news-date text-center">
-                            <p><br> </p>
-                        </div>
-                        <div class="heading-box">
-                            <h6><a href="">CPR AED</a></h6>
-                            <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item">Heartsaver CPR with AED training</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="news-content">
-                        <p>
-                            Heartsaver®  First Aid CPR AED is a classroom, video-based, instructor-led course that teaches students critical skills needed to respond to and manage a
-                            first aid, choking or sudden cardiac arrest emergency in the first few minutes until emergency medical services (EMS) arrives.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="news-box" style="height:100%">
-                    <div class="news-image">
-                        <a href=""><img src="images/COURS2.jpg" alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="news-heading d-flex">
-                        <div class="news-date text-center">
-                            <p><br></p>
-                        </div>
-                        <div class="heading-box">
-                            <h6><a href="">FA CPR AED</a></h6>
-                            <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item">Heartsaver First Aid with AED training</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="news-content">
-                        <p>
-                            Students learn skills such as how to treat bleeding, sprains, broken bones, shock and other first aid emergencies.  This course also teaches adult CPR and AED use.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Course Info -->
-<!-- Home About Area -->
-<section class="h-about">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="about-box">
-                    <h4>Why Us</h4>
-                    <img src="images/heartbeat2.png" alt="">
-                    <p>
-                        didiidiidi
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="shedule-box">
-                    <div class="open-hr">
-                        <h6><i class="fa fa-clock-o"></i>Opening Hours</h6>
+                <div class="col-md-6">
+                    <div class="pricing-box" style="height:95%">
                         <ul class="list-unstyled">
-                            <li>Monday - Friday <span>8:30am - 9:00pm</span></li>
-                            <li>Saturday <span>10:30am - 2:30pm</span></li>
-                            <li>Sunday <span>10:00am - 5:00pm</span></li>
+                            <li>
+                                Did you know sudden cardiac arrest is the leading cause of adult death in this country and that most cardiac arrests happen in someone’s home?
+                            </li>
+                            <li>
+                                The ability to perform CPR and to know how to use an automatic external defibrillator can make a lifesaving difference when someone suffers a cardiac or breathing emergency.
+                            </li>
+                            <li>
+                                Every year the American Heart Association trains many people in CPR and how to use an AED. Communities are safer across the country because people are trained
+                                in these lifesaving techniques. American Heart Association training and certification meets the needs of workplace responders, professional rescuers, school
+                                staff and healthcare providers as well as the general public.
+                            </li>
+                            <li>
+                                We hope you will view the training schedule below and decide to sign up for some classes. Just click on the calendar graphic to register.
+                            </li>
                         </ul>
                     </div>
-                    <div class="help-box">
-                        <h6><i class="fa fa-pencil-square-o"></i>Need Help?</h6>
-                        <p>Lorem ipsum dolor sit amet, consecte Molestiae adipisic elit.</p>
-                        <a href="">Make an Appointment</a>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Home About Area -->
-<!-- Pricing -->
-<section class="pricing">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="pricing-top text-center">
-                    <h4>Additional Information</h4>
-                    <img src="images/heartbeat.png" alt="">                   
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="pricing-box" style="height:95%">
-                    <ul class="list-unstyled">
-                        <li>
-                            Did you know sudden cardiac arrest is the leading cause of adult death in this country and that most cardiac arrests happen in someone’s home?
-                        </li>
-                        <li>
-                            The ability to perform CPR and to know how to use an automatic external defibrillator can make a lifesaving difference when someone suffers a cardiac or breathing emergency.
-                        </li>
-                        <li>
-                            Every year the American Heart Association trains many people in CPR and how to use an AED. Communities are safer across the country because people are trained
-                            in these lifesaving techniques. American Heart Association training and certification meets the needs of workplace responders, professional rescuers, school
-                            staff and healthcare providers as well as the general public.
-                        </li>
-                        <li>
-                            We hope you will view the training schedule below and decide to sign up for some classes. Just click on the calendar graphic to register.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="pricing-box" style="height:95%">
-                    <ul class="list-unstyled">
-                        <li>Information regarding our class offerings and location can be found on our calendar above.</li>
-                        <li>We give 10% off on group rates for groups greater than 10 people.</li>
-                        <li>We do travel throughout the counties and would be happy to go to your location if you have 6 or more students.</li>
-                        <li>Credit is only given to students who properly notify us of their absence within 24 hours of their scheduled class date/time.</li>
-                        <li>No refunds are given for “no show” appointments.</li>
-                        <li>We give every student a course completion letter at the end of class.</li>
-                        <li>Wear comfortable clothes for the practical portion of class.</li>
-                    </ul>
-                </div>
-            </div>
-            @*<div class="col-md-4">
-                    <div class="pricing-box text-center">
-                        <h5>Full Checkup</h5>
-                        <p><span>30%</span>Discount</p>
+                <div class="col-md-6">
+                    <div class="pricing-box" style="height:95%">
                         <ul class="list-unstyled">
-                            <li>Blood Presure Checkup</li>
-                            <li>Sugar Checkup</li>
-                            <li>Physical Checkup</li>
-                            <li>Basic Blood Test</li>
-                            <li>Free Medicine</li>
+                            <li>Information regarding our class offerings and location can be found on our calendar above.</li>
+                            <li>We give 10% off on group rates for groups greater than 10 people.</li>
+                            <li>We do travel throughout the counties and would be happy to go to your location if you have 6 or more students.</li>
+                            <li>Credit is only given to students who properly notify us of their absence within 24 hours of their scheduled class date/time.</li>
+                            <li>No refunds are given for “no show” appointments.</li>
+                            <li>We give every student a course completion letter at the end of class.</li>
+                            <li>Wear comfortable clothes for the practical portion of class.</li>
                         </ul>
-                        <a href="">Book Now</a>
                     </div>
-                </div>*@
+                </div>
+                @*<div class="col-md-4">
+                        <div class="pricing-box text-center">
+                            <h5>Full Checkup</h5>
+                            <p><span>30%</span>Discount</p>
+                            <ul class="list-unstyled">
+                                <li>Blood Presure Checkup</li>
+                                <li>Sugar Checkup</li>
+                                <li>Physical Checkup</li>
+                                <li>Basic Blood Test</li>
+                                <li>Free Medicine</li>
+                            </ul>
+                            <a href="">Book Now</a>
+                        </div>
+                    </div>*@
 
+            </div>
         </div>
-    </div>
-</section>
-<!-- End Pricing -->
+    </section>
+    <!-- End Pricing -->
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="f-menu text-center">
+                        <ul class="menu list-unstyled list-inline">
+                            <li class="list-inline-item"><a href="">Home</a></li>
+                            <li class="list-inline-item"><a href="">About</a></li>
+                            <li class="list-inline-item"><a href="">Service</a></li>
+                            <li class="list-inline-item"><a href="">Doctor</a></li>
+                            <li class="list-inline-item"><a href="">Blog</a></li>
+                            <li class="list-inline-item"><a href="">Contact</a></li>
+                        </ul>
+                        <p>Copyright &copy; 2017 | Designed With <i class="fa fa-heart"></i> by <a href="#" target="_blank">StringBuilders</a></p>
+                        <ul class="social list-unstyled list-inline">
+                            <li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-linkedin"></i></a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-youtube"></i></a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="back-to-top text-center">
+                        <a data-scroll href="#btt"><img src="images/backtotop.png" alt="" class="img-fluid"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+    <!-- =========================================
+    JavaScript Files
+    ========================================== -->
+    <!-- jQuery JS -->
+    <script src="js/assets/vendor/jquery-1.12.4.min.js"></script>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <!-- Bootstrap -->
+    <script src="js/assets/popper.min.js"></script>
+    <script src="js/assets/bootstrap.min.js"></script>
+
+    <!-- Wow Animation -->
+    <script src="js/assets/wow.min.js"></script>
+
+    <!-- Owl Slider -->
+    <script src="js/assets/owl.carousel.min.js"></script>
+
+    <!-- Date Picker -->
+    <script src="js/assets/moment.min.js"></script>
+    <script src="js/assets/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Isotope -->
+    <script src="js/assets/isotope.pkgd.min.js"></script>
+
+    <!-- Magnific PopUp -->
+    <script src="js/assets/magnific-popup.min.js"></script>
+
+    <!-- Counter Up -->
+    <script src="js/assets/counterup.min.js"></script>
+    <script src="js/assets/waypoints.min.js"></script>
+
+    <!-- Smooth Scroll -->
+    <script src="js/assets/smooth-scroll.js"></script>
+
+    <!-- Syotimer -->
+    <script src="js/assets/jquery.syotimer.min.js"></script>
+
+    <!-- Mean Menu -->
+    <script src="js/assets/jquery.meanmenu.min.js"></script>
+
+    <!-- Form Validation -->
+    <script src="js/assets/form.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/plugins.js"></script>
+    <script src="js/custom.js"></script>
+
+    <!-- Vendor Js -->
+    <!--Fullcalendar-->
+    <script src="~/vendors/js/fullcalendar/core/main.js"></script>
+    <script src="~/vendors/js/fullcalendar/interaction/main.js"></script>
+    <script src="~/vendors/js/fullcalendar/daygrid/main.js"></script>
+    <script src="~/vendors/js/fullcalendar/timegrid/main.js"></script>
+    <script src="~/vendors/js/fullcalendar/list/main.js"></script>
 
     <style>
         .fc-title {
             color: white;
             /*background-color: #5ebb47;*/
         }
-        
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('calendar');
             var mydefaultDate = $("#defaultDate").val();
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
-              plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
-              height: 'parent',
-              header: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                plugins: ['interaction', 'dayGrid', 'timeGrid', 'list'],
+                height: 'parent',
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
                 },
                 eventClick: function (event) {
                     //alert('Event: ' + event.event.extendedProps.description);
-                    $('#courseTitle').html('Register for '+ event.event.title);
+                    $('#courseTitle').html('Register for ' + event.event.title);
                     $('#descriptTxt').html(event.event.extendedProps.description);
-                    $('#eventUrl').attr('href', event.event.url);
+                    $('#schdls').val(event.event.id);
                     $('#model-box').modal();
                     return false;
                 },
-              defaultView: 'dayGridMonth',
-              defaultDate: mydefaultDate,
-              navLinks: true, // can click day/week names to navigate views
-              editable: true,
-              eventLimit: true, // allow "more" link when too many events
+                defaultView: 'dayGridMonth',
+                defaultDate: mydefaultDate,
+                navLinks: true, // can click day/week names to navigate views
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
                 events: '@Url.Page("/Index", "FindAllEvents")',
                 eventColor: '#00a3c8'
             });
 
             calendar.render();
-  });
+        });
 
     </script>
-}
+
+   
+
+</body>
+</html>

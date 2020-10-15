@@ -1,0 +1,63 @@
+﻿@page
+@model EldaCPRFirstAidTraining.Pages.Student.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].Phone)
+            </th>
+            <th>
+                Registered On
+            </th>
+            <th>
+                Training
+            </th>
+            <th>
+                Scheduled
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Student) {
+        <tr>
+            <td>
+                @Convert.ToString(item.FristName + " " + item.LastName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Convert.ToString(string.Format("{0:MM/dd/yyyy}", item.CreatedOn))
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrainingSchedule.Training.Title)
+            </td>
+            <td>
+                @Convert.ToString(string.Format("{0:MM/dd/yyyy h:mm tt}", item.TrainingSchedule.StartDate))
+               
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
