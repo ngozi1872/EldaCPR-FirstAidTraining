@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\klsomah\\Documents\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj": {}
+    "C:\\Users\\ngozi\\Documents\\StringBuilders\\AppDev\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj": {}
   },
   "projects": {
-    "C:\\Users\\klsomah\\Documents\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj": {
+    "C:\\Users\\ngozi\\Documents\\StringBuilders\\AppDev\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\klsomah\\Documents\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj",
+        "projectUniqueName": "C:\\Users\\ngozi\\Documents\\StringBuilders\\AppDev\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj",
         "projectName": "EldaCPRFirstAidTraining",
-        "projectPath": "C:\\Users\\klsomah\\Documents\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj",
-        "packagesPath": "C:\\Users\\klsomah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\klsomah\\Documents\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\obj\\",
+        "projectPath": "C:\\Users\\ngozi\\Documents\\StringBuilders\\AppDev\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj",
+        "packagesPath": "C:\\Users\\ngozi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ngozi\\Documents\\StringBuilders\\AppDev\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\klsomah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ngozi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\ServiceFabricSDK.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +27,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\Microsoft SDKs\\Service Fabric\\packages": {},
-          "http://nuget.syncfusion.com/nuget_xamarin/nuget/getsyncfusionpackages/xamarin": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
