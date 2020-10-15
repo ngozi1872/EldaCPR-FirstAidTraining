@@ -300,7 +300,6 @@ C:\Users\klsomah\Documents\EldaCPR-FirstAidTraining\EldaCPRFirstAidTraining\Elda
 C:\Users\klsomah\Documents\EldaCPR-FirstAidTraining\EldaCPRFirstAidTraining\EldaCPRFirstAidTraining\obj\Debug\netcoreapp3.1\Razor\Pages\Training\Details.cshtml.g.cs
 C:\Users\klsomah\Documents\EldaCPR-FirstAidTraining\EldaCPRFirstAidTraining\EldaCPRFirstAidTraining\obj\Debug\netcoreapp3.1\Razor\Pages\Training\Edit.cshtml.g.cs
 C:\Users\klsomah\Documents\EldaCPR-FirstAidTraining\EldaCPRFirstAidTraining\EldaCPRFirstAidTraining\obj\Debug\netcoreapp3.1\Razor\Pages\Training\Index.cshtml.g.cs
-C:\Users\klsomah\Documents\EldaCPR-FirstAidTraining\EldaCPRFirstAidTraining\EldaCPRFirstAidTraining\obj\Debug\netcoreapp3.1\EldaCPRFirstAidTraining.csprojAssemblyReference.cache
 C:\Users\klsomah\Documents\EldaCPR-FirstAidTraining\EldaCPRFirstAidTraining\EldaCPRFirstAidTraining\obj\Debug\netcoreapp3.1\Razor\Pages\TrainingSchedule\Create.cshtml.g.cs
 C:\Users\klsomah\Documents\EldaCPR-FirstAidTraining\EldaCPRFirstAidTraining\EldaCPRFirstAidTraining\obj\Debug\netcoreapp3.1\Razor\Pages\TrainingSchedule\Delete.cshtml.g.cs
 C:\Users\klsomah\Documents\EldaCPR-FirstAidTraining\EldaCPRFirstAidTraining\EldaCPRFirstAidTraining\obj\Debug\netcoreapp3.1\Razor\Pages\TrainingSchedule\Details.cshtml.g.cs
