@@ -1,0 +1,390 @@
+.rg-data-list {
+    margin     : 0 1rem;
+    font-weight: 400;
+
+    li {
+        display        : flex;
+        justify-content: space-between;
+        padding        : 0.5rem 1rem;
+        border-radius  : 0.5rem;
+        @include transition(0.1s, all,0.5s, ease-in-out);
+        &:hover {
+            background: lighten($info-color, 45%)
+        }
+
+        span {
+            flex      : 1;
+            text-align: center;
+        }
+
+        span:first-child {
+            text-align: left
+        }
+
+        span:last-child {
+            text-align: right
+        }
+    }
+}
+
+.rg-timeline {
+    position: relative;
+    @include font-size(12px);
+
+    .rg-timeline-event {
+        position : relative;
+        @include clearfix;
+        display: flex;
+        .rg-timeline-event-left{
+            display: flex;
+            width: 12rem;
+            padding-bottom: 1rem;
+        }
+        .rg-timeline-event-bullet {
+            border-left: $border-style 4px $border-color;
+            background: $secondary-background-color;
+            width: 1rem;
+            margin: 0 1rem;
+            position: relative;
+            &:before {
+                content : "";
+                display : block;
+                width : 0.8rem;
+                height : 0.8rem;
+                border-radius: 100%;
+                border-style : solid;
+                border-width : 0.2rem;
+                margin-right: 1rem;
+                margin-left: -0.55rem;
+                background: $secondary-background-color;
+                position: relative;
+                z-index: 1;
+            }
+            &:after{
+                position: absolute;
+                z-index: 0;
+                content: "";
+                display: block;
+                width: 1.2rem;
+                height: 1.2rem;
+                border-radius: 100%;
+                left: -0.7rem;
+                top: -0.17rem;
+                background: $secondary-background-color;
+            }
+            &.bullet-primary:before {
+                border-color: $primary-color;
+            }
+
+            &.bullet-secondary:before {
+                border-color: $secondary-color;
+            }
+
+            &.bullet-light:before {
+                border-color: $light-color;
+            }
+
+            &.bullet-dark:before {
+                border-color: $dark-color;
+            }
+
+            &.bullet-error:before {
+                border-color: $error-color;
+            }
+
+            &.bullet-warning:before {
+                border-color: $warning-color;
+            }
+
+            &.bullet-info:before {
+                border-color: $info-color;
+            }
+
+            &.bullet-success:before {
+                border-color: $success-color;
+            }
+
+            &.bullet-normal:before {
+                border-color: $primary-text-color;
+            }
+        }
+        .rg-timeline-event-right {
+            width: calc(100% - 12rem);
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+.rg-task-list {
+    .rg-task-list-item {
+        position: relative;
+        padding: 1rem;
+        display: flex;
+        border-radius: $border-radius;
+        align-items: flex-start;
+        border-bottom: dashed $border-size $border-color;
+        &:after {
+            @include clearfix;
+        }
+
+        .task-checkbox {
+            display: flex;
+            align-items: center;
+            font-variant-position: relative;
+            width: 2rem;
+            .custom-control{
+                display: flex;
+                padding: 0;
+                min-height: auto;
+                margin: 0;
+                .custom-control-label{
+                    &:before, &:after{
+                        top: 1px;
+                        bottom:0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+        .time{
+            width: 6rem;
+        }
+        .material-icons{
+            @include font-size(18px);
+        }
+        .task-details {
+           width: calc(100% - 220px);
+            p {
+                font-weight: 400;
+                line-height: 1.2rem;
+                margin : 0;
+
+            }
+
+            span.asignee {
+                color : $secondary-text-color;
+            }
+        }
+
+        .task-list-action {
+            display : none;
+            width : 50px;
+            text-align : center;
+            align-items : center;
+            justify-content : space-around;
+            cursor : pointer;
+            margin-left:auto
+        }
+
+        &:hover {
+            background-color: lighten($primary-background-color,6%);
+        }
+    }
+}
+
+.rg-user-list {
+    .rg-user-list-item {
+        position : relative;
+        padding: 1rem;
+        border-bottom : dashed $border-size $border-color;
+        display : flex;
+        align-items : center;
+        @include transition(0.1s, all,0.5s, ease-in-out);
+        &:after {
+            @include clearfix;
+        }
+        &:hover{
+            background-color: lighten($primary-background-color, 6%);
+        }
+        .user-pic {
+            display : block;
+        }
+
+        .user-details {
+            display : block;
+            padding-left: 1rem;
+            p {
+                margin : 0;
+            }
+        }
+
+        .user-action {
+            display : flex;
+            cursor : pointer;
+            align-items: center;
+            margin-left: auto;
+            span{
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.rg-notification-list {
+    .rg-notification-list-item {
+        position : relative;
+        padding : 1rem;
+        display : flex;
+        align-items: center;
+        border-bottom : $border-style $border-size $border-color;
+        @include transition(0.1s, all,0.5s, ease-in-out);
+        &:after {
+            @include clearfix;
+        }
+
+        .notification-icon {
+            width: 3rem;
+        }
+        &:hover{
+            background-color: lighten($primary-background-color, 6%);
+        }
+        .notification-details {
+            width: 100%;
+
+            p {
+                margin : 0;
+            }
+
+            span {
+                color : $secondary-text-color;
+            }
+        }
+
+        .notification-action {
+            width: 2rem;
+        }
+    }
+}
+
+.rg-message-list {
+    .rg-message-list-item {
+        position : relative;
+        padding: 1rem;
+        border-bottom : dashed $border-size $border-color;
+        display : flex;
+        align-items : center;
+        @include transition(0.1s, all,0.5s, ease-in-out);
+        &:after {
+            @include clearfix;
+        }
+        &:hover{
+            background-color: lighten($primary-background-color, 6%);
+        }
+        .user-pic {
+            cursor: pointer;
+        }
+
+        .message-details {
+            padding-left: 1rem;
+            width: 100%;
+            .message{
+                display: flex;
+                align-items: center;
+            }
+            h6 {
+                margin : 0;
+                display: flex;
+                span{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+
+.rg-blog-list {
+    .rg-blog-list-item {
+        position : relative;
+        padding: 1rem;
+        border-bottom : dashed $border-size $border-color;
+        display : flex;
+        align-items : top;
+        @include transition(0.1s, all,0.5s, ease-in-out);
+        &:after {
+            @include clearfix;
+        }
+        &:hover{
+            background-color: lighten($primary-background-color, 6%);
+        }
+        .blog-pic {
+            display : block;
+        }
+
+        .blog-details {
+            display : block;
+            padding-left: 1rem;
+            p {
+                margin : 0;
+            }
+        }
+
+        .blog-action {
+            display : flex;
+            align-items: center;
+            margin-left: auto;
+            span{
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+.rg-chart-list {
+    .rg-chart-list-item {
+        position : relative;
+        padding: 1rem;
+        border-bottom : dashed $border-size $border-color;
+        display : flex;
+        align-items : top;
+        @include transition(0.1s, all,0.5s, ease-in-out);
+        &:after {
+            @include clearfix;
+        }
+        &:hover{
+            background-color: lighten($primary-background-color, 6%);
+        }
+        .chart {
+            min-width: 10rem;
+            max-width: 10rem;
+            display : block;
+        }
+
+        .chart-details {
+            display : block;
+            padding-left: 1rem;
+            p {
+                margin : 0;
+            }
+        }
+
+        .chart-statistics {
+            .statistics-data{
+                display: flex;
+                justify-content: center;
+            }
+            display : flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.rg-user-data-list{
+    .rg-user-data-list-item {
+        padding: 1rem;
+        border-bottom : dashed $border-size $border-color;
+        display : flex;
+        align-items : center;
+        @include transition(0.1s, all,0.5s, ease-in-out);
+        &:after {
+            @include clearfix;
+        }
+        &:hover{
+            background-color: lighten($primary-background-color, 6%);
+        }
+        .progress{
+            width: 10rem;
+        }
+    }
+}

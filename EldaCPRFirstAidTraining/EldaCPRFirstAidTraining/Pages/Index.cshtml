@@ -99,7 +99,7 @@
                             <li class="list-inline-item"><a href=""><i class="fa fa-linkedin"></i></a></li>
                             <li class="list-inline-item"><a href=""><i class="fa fa-google-plus"></i></a></li>
                             <li class="list-inline-item">
-                                <span><button type="button" data-toggle="modal" data-target="#model-box">Make an Appointment</button></span>
+                                <span><button type="button" data-toggle="modal" data-target="#model-box">Register for training</button></span>
                                 <!-- Appointment Box -->
                                 <div class="modal fade" id="model-box">
                                     <div class="modal-dialog modal-dialog-centered">
@@ -146,27 +146,28 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="logo">
-                        <a href=""><img src="images/logo.png" alt=""></a>
+                        <a href=""><img src="images/logo1.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-md-9">
                     <div class="main-menu text-left">
                         <ul class="list-unstyled list-inline">
                             <li class="list-inline-item active">
-                                <a>HOME</a>
+                                <a href="">HOME</a>
                             </li>
                             <li class="list-inline-item">
-                                <a>SERVICE</a>
+                                <a href="#serviceDiv">SERVICE</a>
                             </li>
                             <li class="list-inline-item">
-                                <a>ABOUT US</a>
+                                <a href="#aboutUsDiv">ABOUT US</a>
                             </li>
-                            <li class="list-inline-item">
-                                <a>APPOINTMENT</a>
+                            <li class="list-inline-item"  data-toggle="modal" data-target="#model-box">
+                                <a>REGISTER</a>
                             </li>
                             <li class="list-inline-item mega-menu">
-                                <a>CONTACT</a>
+                                <a href="#contactDiv">CONTACT</a>
                             </li>
+                            <li class="list-inline-item"><a href="https://www.heart.org/" target="_blank"><img height="50" width="75" src="images/AmricnHeart.jpg" /></a></li>
                         </ul>
                     </div>
                 </div>
@@ -181,14 +182,14 @@
                 <div class="col-md-12">
                     <div class="mobile-menu">
                         <nav id="dropdown">
-                            <a href=""><img src="images/logo.png" alt=""></a>
+                            <a href=""><img src="images/logo1.png" alt=""></a>
                             <a href=""><i class="fa fa-bell-o"></i></a>
                             <ul class="list-unstyled">
                                 <li><a href="">HOME</a></li>
-                                <li><a href="">SERVICE</a></li>
-                                <li><a href="">ABOUT US</a></li>
-                                <li><a href="">SCHEDULE</a></li>
-                                <li><a href="">Contact</a></li>
+                                <li><a href="#serviceDiv">SERVICE</a></li>
+                                <li><a href="#aboutUsDiv">ABOUT US</a></li>
+                                <li><a data-toggle="modal" data-target="#model-box">REGISTER</a></li>
+                                <li><a href="#contactDiv">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -204,17 +205,7 @@
                 <div class="slider-table">
                     <div class="slider-tablecell">
                         <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8 col-md-12">
-                                    <div class="slider-heading wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="0.2s">
-                                        <h1><span>MediSeba</span> Provides Complete Healthcare.</h1>
-                                    </div>
-                                    <div class="slider-para wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                    <div class="slider-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                                    </div>
-                                </div>
+                            <div class="row">                               
                             </div>
                         </div>
                     </div>
@@ -225,17 +216,7 @@
                     <div class="slider-tablecell">
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-8 offset-lg-4 col-md-12 text-right">
-                                    <div class="slider-heading wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="0.2s">
-                                        <h1><span>MediSeba</span> Care About Your Health.</h1>
-                                    </div>
-                                    <div class="slider-para wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                    <div class="slider-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                                        <a href="">Find A Doctor</a>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -250,45 +231,7 @@
         <div class="container">
             <div class="row">
 
-                @*<div class="col-md-6">
-                        <div class="rg-card-simple equal-height">
-                            <header>
-                                <h5>Simple Table</h5>
-                            </header>
-                            <section>
-                                <table class="table rg-table rg-table-simple">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">First</th>
-                                            <th scope="col">Last</th>
-                                            <th scope="col">Handle</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>fat</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>twitter</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </section>
-                        </div>
-                    </div>*@
+               
                 <div class="col-md-12">
                     <partial name="_StatusMessage" model="Model.Message" />
                     <div class="rg-card-simple">
@@ -301,34 +244,9 @@
                 </div>
             </div>
         </div>
-
-        @*<div class="modal fade" id="model-box">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content text-center">
-                        <div class="medel-box-top">
-                            <h4 id="courseTitle">Register</h4>
-                            <img src="images/heartbeat.png" alt="">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <i class="fa fa-times"></i>
-                            </button>
-                        </div>
-                        <div id="descriptTxt"></div>
-                        <br />
-                        <div class="alert alert-danger alert-dismissible fade show">
-                            <button type="button" class="close" data-dismiss="alert">&times;</button>
-                            <strong>PLEASE</strong> register online, but do <strong>NOT</strong> pay online via credit card. Please bring cash or a check with you to the training event as payment. Thank You!!
-                        </div>
-                        <form method="post" asp-page="Index" asp-page-handler="AddVoluntaryForEvent">
-                            <input asp-for="Student.FristName" placeholder="Frist Name" required>
-                            <input asp-for="Student.LastName" placeholder="Last Name" required>
-                            <input asp-for="Student.Email" placeholder="Email" required>
-                            <input asp-for="Student.Phone" placeholder="Last Name" required>
-                            <button type="submit">Book Now</button>
-                        </form>
-                    </div>
-                </div>
-            </div>*@
-
+        <div id="aboutUsDiv" class="text-center" >
+            @*<a href="https://www.heart.org/" target="_blank"><img height="100" width="125" src="images/AmricnHeart.jpg" /></a>*@
+        </div>       
     </section>
     <!-- End Service Area -->
     <!-- About Instructor -->
@@ -349,7 +267,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="about-image">
-                        <img src="images/Instructor.jpg" alt="" class="img-fluid">
+                        <img src="images/BioPic.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -357,9 +275,22 @@
     </section>
     <!-- End Of About Instructor -->
     <!-- Course Info -->
+    <div id="serviceDiv"></div>
     <section class="news">
         <div class="container">
+            @*<h2 class="text-center">Service</h2><br />
+            <img src="images/heartbeat.png" alt="">*@
             <div class="row">
+                <div class="col-md-12">
+                    <div class="pricing-top text-center">
+                        <h4>SERVICE</h4>
+                        <img src="images/heartbeat.png" alt="">
+                        <div class="alert alert-danger alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>PLEASE</strong> register online, but do <strong>NOT</strong> pay online via credit card. Please bring cash or a check with you to the training event as payment. Thank You!!
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-4">
                     <div class="news-box" style="height:100%">
                         <div class="news-image">
@@ -433,35 +364,38 @@
                 </div>
             </div>
         </div>
+        <div id="contactDiv"></div>
     </section>
     <!-- End Course Info -->
     <!-- Home About Area -->
+
     <section class="h-about">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <div class="about-box">
-                        <h4>Why Us</h4>
+                        <h4>GET IN TOUCH</h4>
                         <img src="images/heartbeat2.png" alt="">
                         <p>
-                            didiidiidi
+                            We offer an unmatched variety of courses and programs, created for individuals or groups of all ages and academic levels. Browse our site to learn more,
+                            and get in touch if you have any questions.  We’d love to hear from you!
                         </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="shedule-box">
                         <div class="open-hr">
-                            <h6><i class="fa fa-clock-o"></i>Opening Hours</h6>
+                            <h6><i class="fa fa-clock-o"></i>Contact Us</h6>
                             <ul class="list-unstyled">
-                                <li>Monday - Friday <span>8:30am - 9:00pm</span></li>
-                                <li>Saturday <span>10:30am - 2:30pm</span></li>
-                                <li>Sunday <span>10:00am - 5:00pm</span></li>
+                                <li>Elda CPR & First Aid Training</li>
+                                <li>7106 Castor ave</li>
+                                <li>Philadelphia, PA 19149</li>
+                                <li>Email: eleekpalay@aol.com </li>
+                                <li>Phone: (267) 242-4795 </li>
                             </ul>
                         </div>
                         <div class="help-box">
-                            <h6><i class="fa fa-pencil-square-o"></i>Need Help?</h6>
-                            <p>Lorem ipsum dolor sit amet, consecte Molestiae adipisic elit.</p>
-                            <a href="">Make an Appointment</a>
+                            <a href="" data-toggle="modal" data-target="#model-box">Register for training</a>
                         </div>
                     </div>
                 </div>
@@ -477,7 +411,6 @@
                     <div class="pricing-top text-center">
                         <h4>Additional Information</h4>
                         <img src="images/heartbeat.png" alt="">
-
                         <div class="alert alert-danger alert-dismissible fade show">
                             <button type="button" class="close" data-dismiss="alert">&times;</button>
                             <strong>PLEASE</strong> register online, but do <strong>NOT</strong> pay online via credit card. Please bring cash or a check with you to the training event as payment. Thank You!!
@@ -517,21 +450,6 @@
                         </ul>
                     </div>
                 </div>
-                @*<div class="col-md-4">
-                        <div class="pricing-box text-center">
-                            <h5>Full Checkup</h5>
-                            <p><span>30%</span>Discount</p>
-                            <ul class="list-unstyled">
-                                <li>Blood Presure Checkup</li>
-                                <li>Sugar Checkup</li>
-                                <li>Physical Checkup</li>
-                                <li>Basic Blood Test</li>
-                                <li>Free Medicine</li>
-                            </ul>
-                            <a href="">Book Now</a>
-                        </div>
-                    </div>*@
-
             </div>
         </div>
     </section>
@@ -542,16 +460,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    <div class="text-center">
+                        <a><img height="70" width="175" src="images/AmrnHTransWh.png" /></a>
+                    </div>
+                </div>
+                <div class="col-md-12">
                     <div class="f-menu text-center">
                         <ul class="menu list-unstyled list-inline">
                             <li class="list-inline-item"><a href="">Home</a></li>
-                            <li class="list-inline-item"><a href="">About</a></li>
-                            <li class="list-inline-item"><a href="">Service</a></li>
-                            <li class="list-inline-item"><a href="">Doctor</a></li>
-                            <li class="list-inline-item"><a href="">Blog</a></li>
-                            <li class="list-inline-item"><a href="">Contact</a></li>
+                            <li class="list-inline-item"><a href="#aboutUsDiv">About Us</a></li>
+                            <li class="list-inline-item"><a href="#serviceDiv">Service</a></li>
+                            <li class="list-inline-item"><a href="#contactDiv">Contact</a></li>
                         </ul>
-                        <p>Copyright &copy; 2017 | Designed With <i class="fa fa-heart"></i> by <a href="#" target="_blank">StringBuilders</a></p>
+                        <p>Copyright &copy; 2020 | Designed With <i class="fa fa-heart"></i> by <a href="https://stringbuilders.azurewebsites.net/#" target="_blank">StringBuilders</a></p>
                         <ul class="social list-unstyled list-inline">
                             <li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
                             <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
@@ -565,8 +486,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+                </div>
+</footer>
     <!-- End Footer Section -->
     <!-- =========================================
     JavaScript Files
@@ -663,7 +584,7 @@
 
     </script>
 
-   
+
 
 </body>
 </html>

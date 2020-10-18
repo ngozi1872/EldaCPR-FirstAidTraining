@@ -1,0 +1,137 @@
+.rg-table{
+    @include font-size(14px);
+    margin: 0;
+    color: $primary-text-color;
+    & > thead{
+        th{
+            font-weight: 500;
+            .form-group{
+                margin: 0em;
+            }
+        }
+        &.thead-dark{
+            th{
+                background-color: $dark-color;
+            }
+        }
+    }
+    & > tbody{
+        tr{
+            &.table-primary{
+                background-color: lighten($primary-color, 20%);
+                td{
+                    background-color: lighten($primary-color, 20%);
+                }
+            }
+            &.table-secondary{
+                background-color: lighten($secondary-color, 20%);
+                td{
+                    background-color: lighten($secondary-color, 20%);
+                }
+            }
+            &.table-light{
+                background-color: lighten($light-color, 5%);
+                td{
+                    background-color: lighten($light-color, 5%);
+                }
+            }
+            &.table-dark{
+                background-color: lighten($dark-color, 20%);
+                td{
+                    background-color: lighten($dark-color, 20%);
+                }
+            }
+            &.table-error{
+                background-color: lighten($error-color, 20%);
+                td{
+                    background-color: lighten($error-color, 20%);
+                }
+            }
+            &.table-success{
+                background-color: lighten($success-color, 20%);
+                td{
+                    background-color: lighten($success-color, 20%);
+                }
+            }
+            &.table-warning{
+                background-color: lighten($warning-color, 20%);
+                td{
+                    background-color: lighten($warning-color, 20%);
+                }
+            }
+            &.table-info{
+                background-color: lighten($info-color, 20%);
+                td{
+                    background-color: lighten($info-color, 20%);
+                }
+            }
+        }
+        td{
+            padding: 0.5rem 0.6rem;
+            vertical-align: middle;
+            border-top:  $border-style $border-size $border-color;
+            .form-group{
+                margin: 0em;
+            }
+            .linked-users{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 2.8rem;
+                    height: 2.8rem;
+                    border-radius: 100%;
+                    border: $border-style $border-size $border-color;
+                }
+                img + img{
+                    margin-left: -1.5em;
+                }
+            }
+        }
+    }
+    &.rg-table-simple{
+        & > thead {
+            th{
+                border-top: 0;
+                border-bottom: $border-style $border-size $border-color;
+            }
+        }
+    }
+    &.table-borderless{
+        & > thead{
+            th{
+                border: 0;
+            }
+        }
+        & > tbody{
+            td{
+                border: 0;
+            }
+        }
+    }
+    &.dataTable {
+        & > thead {
+            th{
+                border-bottom: 0;
+                padding: 0.5rem 0.6rem;
+            }
+        }
+        &.no-footer{
+            border-bottom: 0;
+        }
+        
+    }
+    &.table-dark{
+        background-color: $dark-color;
+        color: $primary-text-inverse;
+        &.table-striped {
+            tbody {
+                tr:nth-of-type(even){
+                    background-color: lighten($dark-color, 10%);
+                }
+                tr:nth-of-type(odd){
+                    background-color: lighten($dark-color, 5%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+//Side Navigation Layout
+main {
+    & > aside{
+        left: unset;
+        right: 0;
+        .brand-bar {
+            .rg-toggle-button{
+                transform: translateX(-50%);
+            }
+        }
+        .main-navigation {
+            a{
+                & > .more_horiz{
+                    margin-left: unset;
+                    margin-right: 1.9rem;
+                }
+            }
+            ul {
+                li {
+                    a{
+                        .material-icons.main-nav-icon{
+                            margin-left: 1rem;
+                            margin-right: 1.9rem;
+                        }
+                        .material-icons:last-child{
+                            transform: rotate(180deg);
+                            margin-left: 1rem;
+                        }
+
+                        &:hover{
+                            &:before{
+                                left: unset;
+                                right: 0;
+                                border-radius: 0;
+                                border-top-left-radius: $border-radius;
+                                border-bottom-left-radius: $border-radius;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & > section{
+        padding-left: 0;
+        padding-right: 260px;
+        & > header {
+            .notification-bar{
+                margin-left: unset;
+                margin-right: auto;
+            }
+        }
+    }
+    &.rg-collapse{
+        & > aside{
+            left: unset;
+            right: 0;
+            .brand-bar {
+                .rg-toggle-button{
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        & > section{
+            padding-left: unset;
+            padding-right: 80px;
+        }
+    }
+}
+
+
+
+@media (max-width: 1024px) {
+    main {
+        &>aside {
+            transform: translateX(0);
+        }
+        &>section {
+            padding-left: 0;
+            padding-right: 0;
+            & > header{
+                width: 100%;
+            }
+        }
+        &.rg-collapse {
+            &>aside {
+                transform: translateX(260px);
+                width: 260px;
+                &:hover{
+                    .rg-toggle-button {
+                        transform: translateX(-150%);
+                    }
+                }
+                .brand-bar{
+                    .rg-toggle-button {
+                        transform: translateX(-150%);
+                    }
+                }
+            }
+            &>section {
+                padding-left: 0;
+                padding-right: 0;
+                & > header{
+                    width:100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 568px){
+    main {
+        & > section {
+            & > header {
+                & .user-info{
+                    margin-left: unset;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}

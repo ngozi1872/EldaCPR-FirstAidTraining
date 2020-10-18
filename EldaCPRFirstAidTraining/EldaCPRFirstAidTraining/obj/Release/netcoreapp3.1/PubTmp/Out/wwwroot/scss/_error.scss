@@ -1,0 +1,11 @@
+.error-container{
+    text-align: center;
+    color: $secondary-text-color;
+    margin-top:5rem;
+    margin: auto;
+    .error-code{
+        font-size: 10rem;
+        color:$warning-color;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,39 @@
+.rg-pagination{
+    margin-bottom: 0;
+    .page-link{
+        border:none;
+        color:$link-color;
+        &:hover,&.active{
+            background-color:$info-color;        
+            color:$primary-text-inverse;
+        }        
+    }
+    .page-item{
+        &:first-child,&:nth-child(2){
+            .page-link{
+                border-top-left-radius: 0px;
+                border-bottom-left-radius:0px;
+                background-color: $primary-background-color;                
+            }
+        }
+        .page-link{
+            .material-icons{
+                font-size: 100%;
+            }
+        }
+    }
+    .page-item{
+        &:last-child,&:nth-last-child(2){
+            .page-link{
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                background-color: $primary-background-color;
+                font-size: 100%;
+            }
+        }
+    }
+  
+    li{
+        margin-right: 5px;
+    }
+  }

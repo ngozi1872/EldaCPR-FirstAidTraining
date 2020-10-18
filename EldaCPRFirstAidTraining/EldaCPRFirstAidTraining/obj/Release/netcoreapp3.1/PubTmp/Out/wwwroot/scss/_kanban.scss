@@ -1,0 +1,115 @@
+.kanban{
+    display: flex;
+    overflow-x: auto;
+    padding: 0 10px;
+    overflow-y: hidden;
+    .bucket{
+        min-width:340px;
+        margin-right: 2rem;
+        & > header {
+            margin-bottom: 1rem;
+            .heading{
+                span{
+                    @include font-size(12px);
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+        & >section{
+            height: 100%;
+        }
+        .card{
+            &.rg-card-action{
+                box-shadow:none;
+                border: $border-style $border-size $border-color;
+            }
+            .inline-actions{
+                    span{
+                        @include font-size(14px);
+                        color: $secondary-text-color;
+                    }
+                }
+                
+            >header{
+                .heading{
+                    .tag-colors{
+                        @include font-size(10px);
+                        padding-bottom: 0.8rem;
+                        span{
+                            width:4rem;
+                            height: 0.3rem;
+                            display: inline-block;
+                            &.primary{
+                                background-color:$primary-color;
+                            }
+                            &.secondary{
+                                background-color:$secondary-color;
+                            }
+                            &.light{
+                                background-color:$light-color;
+                            }
+                            &.dark{
+                                background-color:$dark-color;
+                            }
+                            &.error{
+                                background-color:$error-color;
+                            }
+                            &.warning{
+                                background-color:$warning-color;
+                            }
+                            &.success{
+                                background-color:$success-color;
+                            }
+                            &.info{
+                                background-color:$info-color;
+                            }
+                        }
+                    }
+                }
+            }
+            section{
+                .due-date-container{
+                    color: $secondary-text-color;
+                    padding: 1rem 0;
+                    .due-date{
+                        span{
+                            background-color: $light-color;
+                            display: flex;
+                            border-radius: $border-radius;
+                            padding: 0.1rem;
+                            align-items: center;
+                        }
+                    }
+                    .attachment-comment-count{
+                        padding-right:0rem;
+                        >span{
+                            margin-right: 0.8rem;
+                        }
+                        >span:nth-child(1) span{
+                            padding-right: 0rem;   
+                        }
+                        span{
+                            display: flex;
+                            width: 3.4rem;
+                            float: left;
+                            padding-right: 0.3rem;
+                        }
+                    }
+
+                }
+                .assignees{
+                    .add-assignees{
+                        height: 2.6rem;
+                        width: 2.6rem;
+                        border: $border-size dashed $border-color;
+                        padding: 0.5rem;
+                        color: $secondary-text-color;
+                    }
+                    .btn{
+                       box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}

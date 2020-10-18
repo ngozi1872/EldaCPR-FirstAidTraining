@@ -1,0 +1,26 @@
+
+.rg-form-wizard {
+    .icon-image-preview {
+        float: left;
+        margin-left: -20px;
+    }
+    ul {
+        display: flex;
+        background-color: $primary-background-color;
+        li {
+            flex: 1;
+            padding: 20px 10px;
+            text-align: center;
+            &:hover {
+                background-color: $secondary-color;
+                cursor: pointer;
+            }
+            &.active{
+                background-color: darken($primary-background-color, 10%);
+            }
+            span {
+                padding: 20px 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,202 @@
+.tooltip{
+    &.primary{
+        .tooltip-inner{
+            background: $primary-color;
+        }
+        &.bs-tooltip-top{
+            .arrow:before{
+                border-top-color: $primary-color;
+            }
+        }
+        &.bs-tooltip-left{
+            .arrow:before{
+                border-left-color: $primary-color;
+            }
+        }
+        &.bs-tooltip-right{
+            .arrow:before{
+                border-right-color: $primary-color;
+            }
+        }
+        &.bs-tooltip-bottom{
+            .arrow:before{
+                border-bottom-color: $primary-color;
+            }
+        }
+    }
+    &.secondary{
+        .tooltip-inner{
+            background: $secondary-color;
+        }
+        &.bs-tooltip-top{
+            .arrow:before{
+                border-top-color: $secondary-color;
+            }
+        }
+        &.bs-tooltip-left{
+            .arrow:before{
+                border-left-color: $secondary-color;
+            }
+        }
+        &.bs-tooltip-right{
+            .arrow:before{
+                border-right-color: $secondary-color;
+            }
+        }
+        &.bs-tooltip-bottom{
+            .arrow:before{
+                border-bottom-color: $secondary-color;
+            }
+        }
+    }
+    &.light{
+        .tooltip-inner{
+            background:  $light-color;
+        }
+        &.bs-tooltip-top{
+            .arrow:before{
+                border-top-color: $light-color;
+            }
+        }
+        &.bs-tooltip-left{
+            .arrow:before{
+                border-left-color: $light-color;
+            }
+        }
+        &.bs-tooltip-right{
+            .arrow:before{
+                border-right-color: $light-color;
+            }
+        }
+        &.bs-tooltip-bottom{
+            .arrow:before{
+                border-bottom-color: $light-color;
+            }
+        }
+    }
+    &.dark{
+        .tooltip-inner{
+            background: $dark-color;
+        }
+        &.bs-tooltip-top{
+            .arrow:before{
+                border-top-color: $dark-color;
+            }
+        }
+        &.bs-tooltip-left{
+            .arrow:before{
+                border-left-color: $dark-color;
+            }
+        }
+        &.bs-tooltip-right{
+            .arrow:before{
+                border-right-color: $dark-color;
+            }
+        }
+        &.bs-tooltip-bottom{
+            .arrow:before{
+                border-bottom-color: $dark-color;
+            }
+        }
+    }
+    &.error{
+        .tooltip-inner{
+            background: $error-color;
+        }
+        &.bs-tooltip-top{
+            .arrow:before{
+                border-top-color: $error-color;
+            }
+        }
+        &.bs-tooltip-left{
+            .arrow:before{
+                border-left-color: $error-color;
+            }
+        }
+        &.bs-tooltip-right{
+            .arrow:before{
+                border-right-color: $error-color;
+            }
+        }
+        &.bs-tooltip-bottom{
+            .arrow:before{
+                border-bottom-color: $error-color;
+            }
+        }
+    }
+    &.warning{
+        .tooltip-inner{
+            background: $warning-color;
+        }
+        &.bs-tooltip-top{
+            .arrow:before{
+                border-top-color: $warning-color;
+            }
+        }
+        &.bs-tooltip-left{
+            .arrow:before{
+                border-left-color: $warning-color;
+            }
+        }
+        &.bs-tooltip-right{
+            .arrow:before{
+                border-right-color: $warning-color;
+            }
+        }
+        &.bs-tooltip-bottom{
+            .arrow:before{
+                border-bottom-color: $warning-color;
+            }
+        }
+    }
+    &.info{
+        .tooltip-inner{
+            background: $info-color;
+        }
+        &.bs-tooltip-top{
+            .arrow:before{
+                border-top-color: $info-color;
+            }
+        }
+        &.bs-tooltip-left{
+            .arrow:before{
+                border-left-color: $info-color;
+            }
+        }
+        &.bs-tooltip-right{
+            .arrow:before{
+                border-right-color: $info-color;
+            }
+        }
+        &.bs-tooltip-bottom{
+            .arrow:before{
+                border-bottom-color: $info-color;
+            }
+        }
+    }
+    &.success{
+        .tooltip-inner{
+            background: $success-color;
+        }
+        &.bs-tooltip-top{
+            .arrow:before{
+                border-top-color: $success-color;
+            }
+        }
+        &.bs-tooltip-left{
+            .arrow:before{
+                border-left-color: $success-color;
+            }
+        }
+        &.bs-tooltip-right{
+            .arrow:before{
+                border-right-color: $success-color;
+            }
+        }
+        &.bs-tooltip-bottom{
+            .arrow:before{
+                border-bottom-color: $success-color;
+            }
+        }
+    }
+}

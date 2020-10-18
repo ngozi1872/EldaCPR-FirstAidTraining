@@ -1,0 +1,92 @@
+.form-control{
+    height: calc(1.5em + .75rem + 4px);
+    color: $secondary-text-color;
+    border-color: $border-color;
+    background: $primary-background-color;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $secondary-text-color;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+    color: $secondary-text-color;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+    color: $secondary-text-color;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+    color: $secondary-text-color;
+    }
+    &:focus{
+        border-color: lighten($primary-color, 40%);
+        box-shadow: 0 0 0 0.2rem $box-shadow-color;
+    }
+    &:disabled{
+        background: $primary-background-color;
+        opacity: 0.3;
+    }
+}
+.custom-control-label::before{
+    border-color: darken($border-color, 10%);
+    background-color: $primary-background-color;
+
+}
+.custom-file-label{
+    background: $primary-background-color;
+    color: $secondary-text-color;
+    border-color: $border-color;
+}
+.custom-select{
+    color: $secondary-text-color;
+    border-color: $border-color;
+    background: $primary-background-color;
+}
+
+.custom-control-input:focus~.custom-control-label::before{
+    border-color: lighten($primary-color, 40%);
+    box-shadow: 0 0 0 0.2rem $box-shadow-color;
+}
+.form-control-rectangle {
+    border-radius: $border-radius-rectangle;
+}
+
+.form-control-capsule {
+    border-radius: $border-radius-capsule;
+}
+
+.sizing-buttons button {
+    vertical-align: top;
+}
+
+.form-group label {
+    font-weight: 400;
+}
+
+.thick-slider {
+    height: 18px;
+    background: $primary-background-color;
+    border-radius: $border-radius-capsule;
+}
+
+textarea {
+    resize: none;
+}
+
+.search-input{
+    display: flex;
+    border: $border-size $border-style $border-color;
+    border-radius: $border-radius;
+    transition: all .15s ease-in-out;
+    input{
+        border: none;
+        transition:none;
+      }
+      .btn{
+        left:0px;
+        border: none;
+        color: $secondary-text-color;
+        padding:0px 10px 0px;
+        margin:0px;
+        span{
+            margin-top: 5px;
+        }
+      }
+}

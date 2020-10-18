@@ -12,5 +12,6 @@
     <WebStackScaffolding_IsPartialViewSelected>False</WebStackScaffolding_IsPartialViewSelected>
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_DbContextTypeFullName>EldaCPRFirstAidTraining.Data.EldaCPRFirstAidTrainingContext</WebStackScaffolding_DbContextTypeFullName>
+    <NameOfLastUsedPublishProfile>EldaCPRFirstAid - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
