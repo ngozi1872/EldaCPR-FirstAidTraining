@@ -100,7 +100,7 @@ namespace EldaCPRFirstAidTraining.Pages
             IList<Schedule> sch = _context.TrainingSchedules.Select(e => new Schedule
             {
                 Id = e.Id,
-                Title = $"{e.Training.Title}: {e.Training.Description } -${e.Training.Cost} on {e.StartDate.ToString("MM/dd/yy")}"
+                Title = $"{e.Training.Title}: {e.Training.Description } - ${e.Training.Cost} on {e.StartDate.ToString("MM/dd/yy")}"
             }).ToList();
 
             return sch;

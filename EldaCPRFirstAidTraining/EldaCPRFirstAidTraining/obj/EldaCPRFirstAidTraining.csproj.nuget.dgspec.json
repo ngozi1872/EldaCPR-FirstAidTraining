@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ngozi\\Documents\\StringBuilders\\AppDev\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj": {}
+    "C:\\Users\\klsomah\\Documents\\PrivateWork\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ngozi\\Documents\\StringBuilders\\AppDev\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj": {
+    "C:\\Users\\klsomah\\Documents\\PrivateWork\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ngozi\\Documents\\StringBuilders\\AppDev\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj",
+        "projectUniqueName": "C:\\Users\\klsomah\\Documents\\PrivateWork\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj",
         "projectName": "EldaCPRFirstAidTraining",
-        "projectPath": "C:\\Users\\ngozi\\Documents\\StringBuilders\\AppDev\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj",
-        "packagesPath": "C:\\Users\\ngozi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ngozi\\Documents\\StringBuilders\\AppDev\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\obj\\",
+        "projectPath": "C:\\Users\\klsomah\\Documents\\PrivateWork\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining.csproj",
+        "packagesPath": "C:\\Users\\klsomah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\klsomah\\Documents\\PrivateWork\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ngozi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\klsomah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\ServiceFabricSDK.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,10 +28,13 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\Microsoft SDKs\\Service Fabric\\packages": {},
+          "http://nuget.syncfusion.com/nuget_xamarin/nuget/getsyncfusionpackages/xamarin": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -42,6 +46,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -53,17 +58,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -88,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

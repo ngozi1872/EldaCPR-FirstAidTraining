@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="IIS Web Application Name" description="" value="EldaCPRFirstAid" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\ngozi\\Documents\\StringBuilders\\AppDev\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\klsomah\\Documents\\PrivateWork\\EldaCPR-FirstAidTraining\\EldaCPRFirstAidTraining\\EldaCPRFirstAidTraining\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
   </parameter>
 </parameters>

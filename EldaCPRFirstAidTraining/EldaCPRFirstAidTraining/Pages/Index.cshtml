@@ -8,11 +8,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Elda CPR & First Aid Training</title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>Elda CPR & First Aid Training</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -119,7 +119,7 @@
                                             </div>
                                             <form method="post" asp-page="Index" asp-page-handler="AddTraining">
                                                 <p>
-                                                    <select asp-for="Student.ScheduleId" class="form-control" id="schdls" asp-items="ViewBag.TrainingId">
+                                                    <select asp-for="Student.ScheduleId" class="form-control" id="schdls" asp-items="ViewBag.TrainingId" required>
                                                         <option value=""> Please select </option>
                                                     </select>
                                                 </p>
@@ -188,7 +188,7 @@
                                 <li><a href="">HOME</a></li>
                                 <li><a href="#serviceDiv">SERVICE</a></li>
                                 <li><a href="#aboutUsDiv">ABOUT US</a></li>
-                                <li><a data-toggle="modal" data-target="#model-box">REGISTER</a></li>
+                                <li><a asp-page="/Registration">REGISTER</a></li>
                                 <li><a href="#contactDiv">Contact</a></li>
                             </ul>
                         </nav>
@@ -472,7 +472,7 @@
                             <li class="list-inline-item"><a href="#serviceDiv">Service</a></li>
                             <li class="list-inline-item"><a href="#contactDiv">Contact</a></li>
                         </ul>
-                        <p>Copyright &copy; 2020 | Designed With <i class="fa fa-heart"></i> by <a href="https://stringbuilders.azurewebsites.net/#" target="_blank">StringBuilders</a></p>
+                        <p>Copyright &copy; 2020 | Designed With <i class="fa fa-heart"></i> by <a href="https://stringbuilders.azurewebsites.net/" target="_blank">StringBuilders</a></p>
                         <ul class="social list-unstyled list-inline">
                             <li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
                             <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
@@ -543,16 +543,18 @@
     <script src="~/vendors/js/fullcalendar/timegrid/main.js"></script>
     <script src="~/vendors/js/fullcalendar/list/main.js"></script>
 
-    <style>
+    <style>    
         .fc-title {
             color: white;
             /*background-color: #5ebb47;*/
         }
+      
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('calendar');
             var mydefaultDate = $("#defaultDate").val();
+            var viewportWidth = $(window).width();
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 plugins: ['interaction', 'dayGrid', 'timeGrid', 'list'],
@@ -567,7 +569,12 @@
                     $('#courseTitle').html('Register for ' + event.event.title);
                     $('#descriptTxt').html(event.event.extendedProps.description);
                     $('#schdls').val(event.event.id);
-                    $('#model-box').modal();
+                    if (viewportWidth > 980) {
+                        $('#model-box').modal();
+                    }
+                    else {
+                        window.open("Registration");
+                    }
                     return false;
                 },
                 defaultView: 'dayGridMonth',
@@ -581,6 +588,16 @@
 
             calendar.render();
         });
+
+        //var viewportWidth = $(window).width();
+        //var viewportHeight = $(window).height();
+
+        //$(window).resize(function () {
+        //    viewportWidth = $(window).width();
+        //    viewportHeight = $(window).height();
+        //    alert(viewportWidth + "  " + viewportHeight);
+        //});
+
 
     </script>
 
